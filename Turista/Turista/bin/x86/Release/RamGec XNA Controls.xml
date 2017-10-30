@@ -1,0 +1,1821 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RamGec XNA Controls</name>
+    </assembly>
+    <members>
+        <member name="T:RamGecXNAControls.GUIList`1">
+            <summary>
+            Custom List collection (adds Parent parameter)
+            </summary>
+            <typeparam name="T">Type - GUIControl</typeparam>
+        </member>
+        <member name="M:RamGecXNAControls.GUIList`1.CompareByZIndex(RamGecXNAControls.GUIControl,RamGecXNAControls.GUIControl)">
+            <summary>
+            Compare two controls by their Z buffer (highest -> lowest)
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIList`1.parent">
+            <summary>
+            Parent Control that created this list
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIList`1.parentGUIManager">
+            <summary>
+            Parent GUIManager
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIList`1.data">
+            <summary>
+            Actual list that stores GUIControls
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.GUIList`1.#ctor(RamGecXNAControls.GUIControl,RamGecXNAControls.GUIManager)">
+            <summary>
+            Creates GUIList collection
+            </summary>
+            <param name="parent">Parent control</param>
+        </member>
+        <member name="T:RamGecXNAControls.TextArea">
+            <summary>
+            TextArea Control
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.GUIControl">
+            <summary>
+            GUIControl class
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl.Bounds">
+            <summary>
+            Control relative bounds within parent control (location and size)
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl.Transparency">
+            <summary>
+            Alpha transparency
+            0 - transparent; 1 - opaque
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl.Visible">
+            <summary>
+            Control visibility
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl.ZIndex">
+            <summary>
+            Controls Z index (items with higher value will be on top of others that have a lower value)
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl.Focused">
+            <summary>
+            Checks if control has focus
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl.Parent">
+            <summary>
+            Parent control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl.Controls">
+            <summary>
+            List of children controls
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl.Name">
+            <summary>
+            Control Name
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl.Enabled">
+            <summary>
+            Determines if user can interact with the control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl.Hint">
+            <summary>
+            If set, displays a hint tooltip on right mouse click
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl.state">
+            <summary>
+            Control's state (affects tint color)
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl._oldMouseState">
+            <summary>
+            Mouse state from the last update cycle
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIControl._oldKeyboardState">
+            <summary>
+            Keyboard state from the last update cycle
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates abstract GUIControl instance
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates abstract GUIControl instance
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates abstract GUIControl and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.LoadControl(System.Xml.XmlNode)">
+            <summary>
+            Loads control data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.SaveControl(System.Xml.XmlDocument)">
+            <summary>
+            Returns control data (including all children controls) as XmlNode
+            </summary>
+            <param name="xmlDocument">Root XmlDocument where XmlElements should be created</param>
+            <returns>XmlNode containing control data</returns>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.GetControl(System.String)">
+            <summary>
+            Retrieves the first occurence of a control (of a given name) within children controls
+            </summary>
+            <param name="name">Control Name</param>
+            <returns>GUIControl or null if control was not found</returns>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.GetAllControls">
+            <summary>
+            Retrieves a list of all controls within its children controls
+            </summary>
+            <returns>List of all containing controls</returns>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.InBounds(System.Int32,System.Int32)">
+            <summary>
+            Checks if location is within current control bounds AND not within its children bounds
+            </summary>
+            <param name="x">X</param>
+            <param name="y">Y</param>
+            <returns>If location is ONLY on this control</returns>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.InBounds(System.Int32,System.Int32,System.Boolean@)">
+            <summary>
+            Recursive InBounds search
+            </summary>
+            <param name="x">X</param>
+            <param name="y">Y</param>
+            <param name="finish">Checks if active control was found</param>
+            <returns>Returns if this is an active control</returns>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.InBounds(Microsoft.Xna.Framework.Point)">
+            <summary>
+            Checks if location is within current control bounds AND not within its children bounds
+            </summary>
+            <param name="location">Target location</param>
+            <returns>If location is ONLY on this control</returns>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.DrawHint(Microsoft.Xna.Framework.Graphics.SpriteBatch)">
+            <summary>
+            Draws the tooltip with hint
+            </summary>
+            <param name="spriteBatch">SpriteBatch</param>
+            <param name="theme">Current theme</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)">
+            <summary>
+            Handles control drawing
+            </summary>
+            <param name="spriteBatch">SpriteBatch to use for drawing</param>
+            <param name="theme">Theme</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIControl.Update(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Handles control updating
+            </summary>
+            <param name="gameTime">GameTime</param>
+        </member>
+        <member name="P:RamGecXNAControls.GUIControl.Theme">
+            <summary>
+            Control Theme information
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.GUIControl.ParentGUIManager">
+            <summary>
+            GUIManager that handles this control
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.GUIControl.AbsoluteBounds">
+            <summary>
+            Returns absolute viewpoint bounds of a control element
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.GUIControl.IsDrawable">
+            <summary>
+            Returns if control is actually being drawed on screen
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.GUIControl.IsMouseOver">
+            <summary>
+            Checks if mouse is over control (within bounds)
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.GUIControl.IsMouseLeftDown">
+            <summary>
+            Checks if mouse left button is pressed over control (within bounds)
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.GUIControl.IsMouseRightDown">
+            <summary>
+            Checks if mouse right button is pressed over control (within bounds)
+            </summary>
+        </member>
+        <member name="E:RamGecXNAControls.GUIControl.OnMouseMove">
+            <summary>
+            Mouse is moving over control element
+            </summary>
+        </member>
+        <member name="E:RamGecXNAControls.GUIControl.OnMousePressed">
+            <summary>
+            Mouse button has been pressed
+            </summary>
+        </member>
+        <member name="E:RamGecXNAControls.GUIControl.OnMouseReleased">
+            <summary>
+            Mouse button has been released
+            </summary>
+        </member>
+        <member name="E:RamGecXNAControls.GUIControl.OnKeyDown">
+            <summary>
+            Key was pressed while control is focused
+            </summary>
+        </member>
+        <member name="E:RamGecXNAControls.GUIControl.OnKeyUp">
+            <summary>
+            Key was released while control is focused
+            </summary>
+        </member>
+        <member name="E:RamGecXNAControls.GUIControl.OnClick">
+            <summary>
+            Control was clicked (left mouse button)
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.GUIControl.MouseMoveEventHandler">
+            <summary>
+            Delegate for OnMouse events
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+            <param name="mouseState">MouseState</param>
+        </member>
+        <member name="T:RamGecXNAControls.GUIControl.MousePressedEventHandler">
+            <summary>
+            Delegate for OnMousePressed events
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+            <param name="mouseState">MouseState</param>
+        </member>
+        <member name="T:RamGecXNAControls.GUIControl.MouseReleasedEventHandler">
+            <summary>
+            Delegate for OnMouseReleased events
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+            <param name="mouseState">MouseState</param>
+        </member>
+        <member name="T:RamGecXNAControls.GUIControl.KeyDownEventHandler">
+            <summary>
+            Delegate for OnKeyDown events
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+            <param name="keyboardState">KeyboardState</param>
+        </member>
+        <member name="T:RamGecXNAControls.GUIControl.KeyUpEventHandler">
+            <summary>
+            Delegate for OnKeyUp events
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+            <param name="keyboardState">KeyboardState</param>
+        </member>
+        <member name="T:RamGecXNAControls.GUIControl.ClickEventHandler">
+            <summary>
+            Delegate for OnClick events
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+        </member>
+        <member name="T:RamGecXNAControls.GUIControl.ControlStates">
+            <summary>
+            States each control might be assigned
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextArea.Colorize">
+            <summary>
+            If set, applies colors to Text as defined in ColorTable.
+            Invoke colorization with $ character followed by key character.
+            Example: "$rRed $bBlue text here"
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextArea.ColorTable">
+            <summary>
+            Stores a char-Color pair. Each char (key) represents which Color (value) should be used
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextArea.Lines">
+            <summary>
+            Stores the drawable representation of Text
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextArea.scrollerPosition">
+            <summary>
+            Relative scroller possition
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextArea.itemHeight">
+            <summary>
+            Cache of Items (rows) height
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.TextArea.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates TextArea control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.TextArea.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates TextArea control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+        </member>
+        <member name="M:RamGecXNAControls.TextArea.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates TextArea control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="M:RamGecXNAControls.TextArea.CalculateLineColorizationTable(System.String,System.Collections.Generic.List{RamGecXNAControls.TextArea.ColorStruct}@)">
+            <summary>
+            Creates Colorization table and returns a string with removed tokens
+            </summary>
+            <param name="line">Input string containing tokens</param>
+            <param name="colorizationTable">out. Colorization table</param>
+            <returns>String without tokens</returns>
+        </member>
+        <member name="M:RamGecXNAControls.TextArea.BreakTextToLines">
+            <summary>
+            Breaks Text to Lines (simplified, no WordWrap/Colorization)
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.TextArea.LineCorrections(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Corrects Lines based on WordWrap/Colorization
+            </summary>
+            <param name="bounds"></param>
+        </member>
+        <member name="P:RamGecXNAControls.TextArea.WordWrap">
+            <summary>
+            Warp words. If set to false, strings that do not fit, won't be displayed
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TextArea.Text">
+            <summary>
+            TextArea text value
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TextArea.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TextArea.TextColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TextArea.scrollIndex">
+            <summary>
+            Index of the first displayed element
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TextArea.scrollerSize">
+            <summary>
+            Returns the relative size of a scroller (1 - takes full allowed height (minus margins))
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TextArea.showScrollBar">
+            <summary>
+            Checks if ScrollBar is visible
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TextArea.displayableItemsCount">
+            <summary>
+            Calculates how many items can be displayed in the control
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.TextArea.ColorStruct">
+            <summary>
+            Structure to store colorization table
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextArea.ColorStruct.pos">
+            <summary>
+            Token position within a line
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextArea.ColorStruct.color">
+            <summary>
+            Color that should be used from now on
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.GroupBox">
+            <summary>
+            GroupBox Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GroupBox.Title">
+            <summary>
+            GroupBox Title
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.GroupBox.#ctor(Microsoft.Xna.Framework.Rectangle,System.String,System.String)">
+            <summary>
+            Creates a GroupBox control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="title">GroupBox text</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.GroupBox.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates a GroupBox control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="title">GroupBox text</param>
+        </member>
+        <member name="M:RamGecXNAControls.GroupBox.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates a GroupBox control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+        </member>
+        <member name="M:RamGecXNAControls.GroupBox.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates GroupBox control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="P:RamGecXNAControls.GroupBox.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.GroupBox.TitleColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.ExtendedControls.ColorDialog">
+            <summary>
+            ColorDialog
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.ExtendedControls.ColorDialog.ColorsList">
+            <summary>
+            List of colors displayed on ColorDialog window. Max: 16 items
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.#ctor(Microsoft.Xna.Framework.Point,RamGecXNAControls.GUIManager,Microsoft.Xna.Framework.Color,RamGecXNAControls.ExtendedControls.ColorDialog.OKClickEventHandler)">
+            <summary>
+            Creates and shows ColorDialog window
+            </summary>
+            <param name="location">Location of top-left corner of ColorDialog window. If Point.Zero - display in the middle of the screen</param>
+            <param name="guiManager">GUIManager where this control should be drawed</param>
+            <param name="selectedColor">Currently selected color</param>
+            <param name="onOKClickCallback">>Callback method that is called when OK button is clicked</param>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.#ctor(RamGecXNAControls.GUIManager,Microsoft.Xna.Framework.Color,RamGecXNAControls.ExtendedControls.ColorDialog.OKClickEventHandler)">
+            <summary>
+            Creates and shows ColorDialog window in the center of the screen
+            </summary>
+            <param name="guiManager">GUIManager where this control should be drawed</param>
+            <param name="selectedColor">Currently selected color</param>
+            <param name="onOKClickCallback">>Callback method that is called when OK button is clicked</param>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.#ctor(Microsoft.Xna.Framework.Point,RamGecXNAControls.GUIManager,RamGecXNAControls.ExtendedControls.ColorDialog.OKClickEventHandler)">
+            <summary>
+            Creates and shows ColorDialog window
+            </summary>
+            <param name="location">Location of top-left corner of ColorDialog window. If Point.Zero - display in the middle of the screen</param>
+            <param name="guiManager">GUIManager where this control should be drawed</param>
+            <param name="onOKClickCallback">>Callback method that is called when OK button is clicked</param>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.Show">
+            <summary>
+            Show Window (add control to GUIManager)
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.Close">
+            <summary>
+            Close Window (remove control from GUIManager)
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.Update">
+            <summary>
+            Updates all controls to represent correct colors and values
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.UpdateCursors">
+            <summary>
+            Displays cursors in Hue and Color images
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.GenerateSelectedColor">
+            <summary>
+            Creates selected color
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.CreateCursors">
+            <summary>
+            Creates Cursors' textures
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.UpdateValues">
+            <summary>
+            Updates values of TextBox'es
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.GenerateHueWheel">
+            <summary>
+            Create Hue texture
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.GenerateColorWheel">
+            <summary>
+            Create Color texture
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.HsvToRgb(System.Double,System.Double,System.Double)">
+            <summary>
+            Converts HSV to RGB
+            </summary>
+            <param name="h">Hue</param>
+            <param name="s">Saturation</param>
+            <param name="v">Value</param>
+            <returns>Converted Color</returns>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.ColorDialog.RGBtoHSV(System.Single,System.Single,System.Single,System.Double@,System.Double@,System.Double@)">
+            <summary>
+            Converts RGB to HSV
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ExtendedControls.ColorDialog.SelectedColor">
+            <summary>
+            Sets or gets currently selected color
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.ExtendedControls.ColorDialog.OKClickEventHandler">
+            <summary>
+            Delegate for OnOKClick events
+            </summary>
+            <param name="selectedColor">Selected Color</param>
+        </member>
+        <member name="T:RamGecXNAControls.TextBox">
+            <summary>
+            TextBox Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextBox.NumbersOnly">
+            <summary>
+            User can only enter numbers
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextBox.AlphaNumericOnly">
+            <summary>
+            User can only enter letters, digits and space
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextBox.PasswordField">
+            <summary>
+            If set to true, all input is masked and displayed as a collection of the same character
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextBox.PasswordMask">
+            <summary>
+            Character (or string) that masks the input for PasswordField
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextBox.SubmitKey">
+            <summary>
+            Key that triggers OnSubmit events. Default = ENTER
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextBox.CursorChar">
+            <summary>
+            Blinking character (or string) when control is active. Default: |
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextBox.lastBlink">
+            <summary>
+            time interval between cursor blinks
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextBox.showCursor">
+            <summary>
+            checks if carret should be drawn this frame
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TextBox.oldKeyboardState">
+            <summary>
+            old keyboard state for tracking repeated keystrokes
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.TextBox.#ctor(Microsoft.Xna.Framework.Rectangle,System.String,System.String)">
+            <summary>
+            Creates TextBox control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="text">TextBox text</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.TextBox.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates TextBox control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="text">TextBox text</param>
+        </member>
+        <member name="M:RamGecXNAControls.TextBox.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates TextBox control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+        </member>
+        <member name="M:RamGecXNAControls.TextBox.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates TextBox control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="P:RamGecXNAControls.TextBox.Text">
+            <summary>
+            TextBox Text
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TextBox.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TextBox.TextColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="E:RamGecXNAControls.TextBox.OnSubmit">
+            <summary>
+            Submit key was pressed
+            </summary>
+        </member>
+        <member name="E:RamGecXNAControls.TextBox.OnTextChanged">
+            <summary>
+            Text was changed
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TextBox.cursor">
+            <summary>
+            location of the cursor
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.TextBox.SubmitEventHandler">
+            <summary>
+            Delegate for handling OnSubmit events
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+        </member>
+        <member name="T:RamGecXNAControls.TextBox.ChangedTextEventHandler">
+            <summary>
+            Delegate for handling OnTextChanged event
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+        </member>
+        <member name="T:RamGecXNAControls.TabControl">
+            <summary>
+            TabControl Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TabControl.Text">
+            <summary>
+            TabControl Text
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.TabControl.#ctor">
+            <summary>
+            Creates TabControl
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.TabControl.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates TabControl control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="T:RamGecXNAControls.ListBox">
+            <summary>
+            ListBox Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.ListBox.Items">
+            <summary>
+            List of items in the control (one per row)
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.ListBox.SelectedItems">
+            <summary>
+            Collection of indices that are currently selected from Items list
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.ListBox.MultipleSelection">
+            <summary>
+            Allows multiple selections
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.ListBox.ShowIcons">
+            <summary>
+            If set, displays icons near every (if assigned) item in the list
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.ListBox.Icons">
+            <summary>
+            Collection of Icons (each index in the Icons list represents each item in Items list)
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.ListBox.scrollerPosition">
+            <summary>
+            Relative scroller possition
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.ListBox.itemHeight">
+            <summary>
+            Cache of Items (rows) height
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ListBox.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates ListBox control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.ListBox.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates ListBox control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+        </member>
+        <member name="M:RamGecXNAControls.ListBox.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates ListBox control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="M:RamGecXNAControls.ListBox.GetIcon(System.Int32)">
+            <summary>
+            Gets an associated icon (or null if not set)
+            </summary>
+            <param name="item">Item index</param>
+            <returns>Icon or null</returns>
+        </member>
+        <member name="P:RamGecXNAControls.ListBox.SelectedString">
+            <summary>
+            Returns currently selected item's text (or the first item from MultipleSelection list)
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ListBox.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ListBox.ItemColor">
+            <summary>
+            Item color
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ListBox.SelectedItemColor">
+            <summary>
+            Selected Item color
+            </summary>
+        </member>
+        <member name="E:RamGecXNAControls.ListBox.OnSelectItem">
+            <summary>
+            Item was selected from the list
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ListBox.scrollIndex">
+            <summary>
+            Index of the first displayed element
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ListBox.scrollerSize">
+            <summary>
+            Returns the relative size of a scroller (1 - takes full allowed height (minus margins))
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ListBox.showScrollBar">
+            <summary>
+            Checks if ScrollBar is visible
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ListBox.displayableItemsCount">
+            <summary>
+            Calculates how many items can be displayed in the control
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.ListBox.SelectItemEventHandler">
+            <summary>
+            Delegate for handling OnSelectItem events
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+            <param name="item">Selected item index</param>
+        </member>
+        <member name="T:RamGecXNAControls.Chart">
+            <summary>
+            Chart Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Chart.Title">
+            <summary>
+            Chart Title
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Chart.AxisLineWidth">
+            <summary>
+            Width of axis lines
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Chart.ChartLineWidth">
+            <summary>
+            Width of chart lines
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Chart.ShowYAxisRange">
+            <summary>
+            Display Y axis range indicators
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Chart.ShowXAxisRange">
+            <summary>
+            Display X axis range indicators
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Chart.ShowGrid">
+            <summary>
+            Display grid
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Chart.GridSpacing">
+            <summary>
+            Space between grid lines
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Chart.ShowGridValues">
+            <summary>
+            Display values of each grid line on X/Y axis
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Chart.charts">
+            <summary>
+            Collection of charts
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Chart.dotTexture">
+            <summary>
+            Blank Texture (1x1 size) used for drawing lines
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.Chart.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates a Chart control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+        </member>
+        <member name="M:RamGecXNAControls.Chart.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates Chart control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="M:RamGecXNAControls.Chart.AddChart(System.Collections.Generic.List{System.Single},System.String,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Adds a new chart to be displayed on this control
+            </summary>
+            <param name="data">Chart data. Data list's index represents X, while values represent Y axis</param>
+            <param name="name">Chart name</param>
+            <param name="color">Chart line color</param>
+        </member>
+        <member name="M:RamGecXNAControls.Chart.RemoveChart(System.String)">
+            <summary>
+            Removes a chart with a given name from control
+            </summary>
+            <param name="name">Chart name</param>
+        </member>
+        <member name="M:RamGecXNAControls.Chart.UpdateMinMaxValues">
+            <summary>
+            Updates MinY, MaxY and MaxX values
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.Chart.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Single,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Draws a line
+            </summary>
+            <param name="spriteBatch">Target SpriteBatch</param>
+            <param name="width">Line Width</param>
+            <param name="color">Line Color</param>
+            <param name="point1">Starting Point</param>
+            <param name="point2">Ending Point</param>
+        </member>
+        <member name="P:RamGecXNAControls.Chart.ChartsList">
+            <summary>
+            Gets a new copy of Charts list
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.Chart.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.Chart.TextColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.Chart.ChartMargin">
+            <summary>
+            Chart Margins inside the control
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.Chart.ChartData">
+            <summary>
+            Structure of each chart
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.GUIManager">
+            <summary>
+            GUIManager Class that handles all controls
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIManager.Game">
+            <summary>
+            Game instance
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIManager.Theme">
+            <summary>
+            Current theme
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIManager.Controls">
+            <summary>
+            List of all controls this GUIManager instance handles
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIManager.content">
+            <summary>
+            Content Manager
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIManager.loadedControls">
+            <summary>
+            List that keeps track of all controls added via LoadControls method
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIManager.saveXmlDocument">
+            <summary>
+            XmlDocument of all saved controls used for SaveControls method
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.GUIManager.topMostWindow">
+            <summary>
+            A first window in Controls list that is set to TopMost (draw it last)
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.#ctor(Microsoft.Xna.Framework.Game,System.String,System.String)">
+            <summary>
+            Creates a GUIManager instance that handles all GUI Controls
+            </summary>
+            <param name="game">Game instance</param>
+            <param name="themesPath">Location of RamGecXNAControls theme folder</param>
+            <param name="themeName">Theme Name</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.#ctor(Microsoft.Xna.Framework.Game)">
+            <summary>
+            Creates a GUIManager instance that handles all GUI Controls
+            By default loads "default" theme from "Themes" folder
+            </summary>
+            <param name="game">Game instance</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.LoadControl(System.Xml.XmlNode,System.Object)">
+            <summary>
+            Loads a control from XmlNode
+            </summary>
+            <param name="parentNode">Parent XmlNode</param>
+            <param name="parentControl">Parent control (GUIControl or GUIManager)</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.LoadTheme(System.String,System.String)">
+            <summary>
+            Loads and uses specified theme
+            </summary>
+            <param name="themesPath">Location of RamGecXNAControls theme folder</param>
+            <param name="themeName">Theme Name</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.GetControl(System.String)">
+            <summary>
+            Retrieves the first occurence of a control (of a given name) within children controls
+            </summary>
+            <param name="name">Control Name</param>
+            <returns>GUIControl or null</returns>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.GetControl(System.Int32,System.Int32)">
+            <summary>
+            Retrieves the control which bounds are covering set point
+            </summary>
+            <param name="x">X</param>
+            <param name="y">Y</param>
+            <returns>GUIControl or null</returns>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.GetAllControls">
+            <summary>
+            Retrieves a list of all controls in a hierarchy tree
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.GetVersion">
+            <summary>
+            Gets a string representing RamGec XNA Control assembly version
+            </summary>
+            <returns>Version string</returns>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.SaveControl(System.String,RamGecXNAControls.GUIControl)">
+            <summary>
+            Save specific control (and all its children) to XML file
+            </summary>
+            <param name="path">Path to XML file</param>
+            <param name="control">Root control</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.LoadControls(System.String)">
+            <summary>
+            Loads controls from a valid XML file
+            </summary>
+            <param name="path">Path to the XML File</param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch)">
+            <summary>
+            Draws all controls on provided SpriteBatch
+            </summary>
+            <param name="spriteBatch"></param>
+        </member>
+        <member name="M:RamGecXNAControls.GUIManager.Update(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Handles input for all controls
+            </summary>
+            <param name="gameTime">GameTime</param>
+        </member>
+        <member name="T:RamGecXNAControls.Button">
+            <summary>
+            Button Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Button.Text">
+            <summary>
+            Button text
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Button.AutoSize">
+            <summary>
+            If set, Width and Bound is updated automatically
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Button.Icon">
+            <summary>
+            Button Image
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.Button.#ctor(Microsoft.Xna.Framework.Rectangle,System.String,System.String)">
+            <summary>
+            Creates button control
+            </summary>
+            <param name="bounds">Relative location within parent control. If Width/Height is 0, treat it as AutoSize</param>
+            <param name="text">Button text</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.Button.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates Button control
+            </summary>
+            <param name="bounds">Relative location within parent control. If Width/Height is 0, treat it as AutoSize</param>
+            <param name="text">Button text</param>
+        </member>
+        <member name="M:RamGecXNAControls.Button.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates Button control
+            </summary>
+            <param name="bounds">Relative location within parent control. If Width/Height is 0, treat it as AutoSize</param>
+        </member>
+        <member name="M:RamGecXNAControls.Button.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates Button control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="M:RamGecXNAControls.Button.DoAutoSize">
+            <summary>
+            Perform AutoSize
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.Button.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.Button.TextColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.TabsContainer">
+            <summary>
+            TabsContainer Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TabsContainer.CurrentTab">
+            <summary>
+            Index of a currently active tab
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TabsContainer.tabRectangles">
+            <summary>
+            cache of tab rectangles (for handling mouse events)
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.TabsContainer.mouseOverTab">
+            <summary>
+            Tab index that mouse is currently over (or -1 if none)
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.TabsContainer.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates TabsContainer Control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.TabsContainer.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates TabsContainer Control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+        </member>
+        <member name="M:RamGecXNAControls.TabsContainer.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates TabsContainer control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="M:RamGecXNAControls.TabsContainer.CalculateTabRectangles">
+            <summary>
+            Calculates Tabs rectangles (location and size)
+            </summary>
+            <param name="Theme">Currently used Theme</param>
+        </member>
+        <member name="P:RamGecXNAControls.TabsContainer.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TabsContainer.ActiveTabColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.TabsContainer.InactiveTabColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.ExtendedControls.MessageBox">
+            <summary>
+            MessageBox Dialog
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.ExtendedControls.MessageBox.boxWindow">
+            <summary>
+            MessageBox Window
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.MessageBox.#ctor(Microsoft.Xna.Framework.Point,RamGecXNAControls.GUIManager,System.String,System.String,RamGecXNAControls.ExtendedControls.MessageBox.OKClickEventHandler)">
+            <summary>
+            Creates and displayes MessageBox dialog window
+            </summary>
+            <param name="location">Location of top-left corner of MessageBox window. If Point.Zero - display in the middle of the screen</param>
+            <param name="guiManager">GUIManager where this control should be drawed</param>
+            <param name="text">Message text</param>
+            <param name="title">MessageBox window title</param>
+            <param name="onOKClickCallback">Callback method that is called when OK button is clicked</param>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.MessageBox.#ctor(Microsoft.Xna.Framework.Point,RamGecXNAControls.GUIManager,System.String,System.String)">
+            <summary>
+            Creates and displayes MessageBox dialog window
+            </summary>
+            <param name="location">Location of top-left corner of MessageBox window. If Point.Zero - display in the middle of the screen</param>
+            <param name="guiManager">GUIManager where this control should be drawed</param>
+            <param name="text">Message text</param>
+            <param name="title">MessageBox window title</param>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.MessageBox.#ctor(Microsoft.Xna.Framework.Point,RamGecXNAControls.GUIManager,System.String)">
+            <summary>
+            Creates and displayes MessageBox dialog window
+            </summary>
+            <param name="location">Location of top-left corner of MessageBox window. If Point.Zero - display in the middle of the screen</param>
+            <param name="guiManager">GUIManager where this control should be drawed</param>
+            <param name="text">Message text</param>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.MessageBox.#ctor(RamGecXNAControls.GUIManager,System.String)">
+            <summary>
+            Creates and displayes MessageBox dialog window in the center of the screen
+            </summary>
+            <param name="guiManager">GUIManager where this control should be drawed</param>
+            <param name="text">Message text</param>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.MessageBox.Show(System.String)">
+            <summary>
+            Show Window (add control to GUIManager)
+            </summary>
+            <param name="text">Message text</param>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.MessageBox.Show">
+            <summary>
+            Show Window (add control to GUIManager)
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.MessageBox.Close">
+            <summary>
+            Close Window (remove control from GUIManager)
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ExtendedControls.MessageBox.Text">
+            <summary>
+            Message text
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ExtendedControls.MessageBox.Title">
+            <summary>
+            MessageBox window title
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ExtendedControls.MessageBox.ButtonIcon">
+            <summary>
+            OK Button Icon
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.ExtendedControls.MessageBox.OKClickEventHandler">
+            <summary>
+            Delegate for OnOKClick events
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+        </member>
+        <member name="T:RamGecXNAControlsExtensions.Extensions">
+            <summary>
+            Class containing extension methods for RamGec XNA Controls
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControlsExtensions.Extensions.ToXNAColor(System.String)">
+            <summary>
+            Converts string to Color structure
+            </summary>
+            <param name="rgbColorString">Input string. Format: "R, G, B"</param>
+            <returns>Converted Color structure</returns>
+        </member>
+        <member name="M:RamGecXNAControlsExtensions.Extensions.ToXNAString(Microsoft.Xna.Framework.Color)">
+            <summary>
+            Converts Color data structure to string ommiting Alpha parameter
+            </summary>
+            <param name="color">Input Color</param>
+            <returns>string: "R, G, B"</returns>
+        </member>
+        <member name="M:RamGecXNAControlsExtensions.Extensions.ToXNARectangle(System.String)">
+            <summary>
+            Converts string to Rectangle structure
+            </summary>
+            <param name="str">Input string formatted as Rectangle.ToString()</param>
+            <returns>Converted Rectangle structure</returns>
+        </member>
+        <member name="T:RamGecXNAControls.RadioButton">
+            <summary>
+            RadioButton Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.RadioButton.Text">
+            <summary>
+            RadioButton Text
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.RadioButton.Group">
+            <summary>
+            Group of RadioButton Controls (only single one can be checked at the time)
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.RadioButton.AutoCheck">
+            <summary>
+            Automatically update Checked state on mouse click
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.RadioButton.AutoSize">
+            <summary>
+            If set, Width and Bound is updated automatically
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.RadioButton.#ctor(Microsoft.Xna.Framework.Rectangle,System.String,System.String)">
+            <summary>
+            Creates a RadioButton control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="text">RadioButton text</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.RadioButton.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates a RadioButton control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="text">RadioButton text</param>
+        </member>
+        <member name="M:RamGecXNAControls.RadioButton.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates RadioButton control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+        </member>
+        <member name="M:RamGecXNAControls.RadioButton.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates RadioButton control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="M:RamGecXNAControls.RadioButton.DoAutoSize">
+            <summary>
+            Perform AutoSize
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.RadioButton.ResetRadioButtons">
+            <summary>
+            Removes all checks from other RadioButton controls (from the same group) and checks the active one
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.RadioButton.Checked">
+            <summary>
+            Sets of gets if RadioButton is checked
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.RadioButton.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.RadioButton.TextColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.Progress">
+            <summary>
+            Progress Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Progress.MinValue">
+            <summary>
+            Minimum allowed value. Default: 0
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Progress.MaxValue">
+            <summary>
+            Maximum allowed value. Default: 1
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Progress.DisplayProgress">
+            <summary>
+            Displays progress on the bar
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Progress.ShowPercentage">
+            <summary>
+            If set and if DisplayProgress is set, Value in percentage form will be displayed
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Progress.Clickable">
+            <summary>
+            Indicates if user can change the progress (with left mouse button)
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.Progress.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates Progress Control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.Progress.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates Progress Control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+        </member>
+        <member name="M:RamGecXNAControls.Progress.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates Progress control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="P:RamGecXNAControls.Progress.Value">
+            <summary>
+            Value of a Progress control
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.Progress.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.Progress.TextColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="E:RamGecXNAControls.Progress.OnProgressChanged">
+            <summary>
+            Progress Value has been changed
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.Progress.ProgressChangedEventHandler">
+            <summary>
+            Delegate for OnProgressChanged events
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+        </member>
+        <member name="T:RamGecXNAControls.ExtendedControls.FileDialog">
+            <summary>
+            FileDialog
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.ExtendedControls.FileDialog.FileFilter">
+            <summary>
+            Search pattern for listing files
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.ExtendedControls.FileDialog.boxWindow">
+            <summary>
+            FileDialog Window
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.FileDialog.#ctor(Microsoft.Xna.Framework.Point,RamGecXNAControls.GUIManager,RamGecXNAControls.ExtendedControls.FileDialog.SelectClickEventHandler)">
+            <summary>
+            Creates and displayes FileDialog window
+            </summary>
+            <param name="location">Location of top-left corner of MessageBox window</param>
+            <param name="guiManager">GUIManager where this control should be drawed</param>
+            <param name="text">Message text</param>
+            <param name="title">MessageBox window title</param>
+            <param name="onOKClickCallback">Callback method that is called when Sellect button is clicked</param>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.FileDialog.Show">
+            <summary>
+            Show Window (add control to GUIManager)
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.ExtendedControls.FileDialog.Close">
+            <summary>
+            Close Window (remove control from GUIManager)
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.ExtendedControls.FileDialog.Filename">
+            <summary>
+            Sets or gets currently selected file (full path)
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.ExtendedControls.FileDialog.SelectClickEventHandler">
+            <summary>
+            Delegate for OnSelectClickCallback
+            </summary>
+            <param name="filename">Filename of selected file (including full path)</param>
+        </member>
+        <member name="T:RamGecXNAControls.Label">
+            <summary>
+            Label Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Label.Text">
+            <summary>
+            Label Text
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Label.AutoSize">
+            <summary>
+            If set, Width and Bound is updated automatically
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.Label.#ctor(Microsoft.Xna.Framework.Rectangle,System.String,System.String)">
+            <summary>
+            Creates a Label control
+            </summary>
+            <param name="bounds">Relative coordinates of the control. If Width/Height is 0, treat it as AutoSize</param>
+            <param name="text">Label text</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.Label.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates a Label control
+            </summary>
+            <param name="bounds">Relative coordinates of the control. If Width/Height is 0, treat it as AutoSize</param>
+            <param name="text">Label text</param>
+        </member>
+        <member name="M:RamGecXNAControls.Label.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates a Label control
+            </summary>
+            <param name="bounds">Relative coordinates of the control. If Width/Height is 0, treat it as AutoSize</param>
+        </member>
+        <member name="M:RamGecXNAControls.Label.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates Label control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="M:RamGecXNAControls.Label.DoAutoSize">
+            <summary>
+            Perform AutoSize
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.Label.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.Label.TextColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.Image">
+            <summary>
+            Image Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Image.Texture">
+            <summary>
+            Image Texture
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.Image.#ctor(Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Graphics.Texture2D,System.String)">
+            <summary>
+            Creates Image control
+            </summary>
+            <param name="bonds">Relative coordinates of the control</param>
+            <param name="text">Image texture</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.Image.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates Image control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+        </member>
+        <member name="M:RamGecXNAControls.Image.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates Image control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="T:RamGecXNAControls.CheckBox">
+            <summary>
+            CheckBox Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.CheckBox.Text">
+            <summary>
+            CheckBox Text
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.CheckBox.AutoCheck">
+            <summary>
+            Automatically change Checked state on mouse clicks
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.CheckBox.AutoSize">
+            <summary>
+            If set, Width and Bound is updated automatically
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.CheckBox.#ctor(Microsoft.Xna.Framework.Rectangle,System.String,System.String)">
+            <summary>
+            Creates a CheckBox control
+            </summary>
+            <param name="bounds">Relative coordinates of the control. If Width/Height is 0, treat it as AutoSize</param>
+            <param name="text">CheckBox text</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.CheckBox.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates a CheckBox control
+            </summary>
+            <param name="bounds">Relative coordinates of the control. If Width/Height is 0, treat it as AutoSize</param>
+            <param name="text">CheckBox text</param>
+        </member>
+        <member name="M:RamGecXNAControls.CheckBox.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates a CheckBox control
+            </summary>
+            <param name="bounds">Relative coordinates of the control. If Width/Height is 0, treat it as AutoSize</param>
+        </member>
+        <member name="M:RamGecXNAControls.CheckBox.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates CheckBox control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="M:RamGecXNAControls.CheckBox.DoAutoSize">
+            <summary>
+            Perform AutoSize
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.CheckBox.Checked">
+            <summary>
+            Sets or gets whether this element was checked
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.CheckBox.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.CheckBox.TextColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="E:RamGecXNAControls.CheckBox.OnChanged">
+            <summary>
+            Submit key was pressed
+            </summary>
+        </member>
+        <member name="T:RamGecXNAControls.CheckBox.ChangedEventHandler">
+            <summary>
+            Delegate for handling OnChanged events
+            </summary>
+            <param name="sender">Control that triggered the event</param>
+        </member>
+        <member name="T:RamGecXNAControls.Themes">
+            <summary>
+            Themes and Skins class
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Themes.IconFile">
+            <summary>
+            File Icon
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Themes.IconFolder">
+            <summary>
+            Folder Icon
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Themes.IconYes">
+            <summary>
+            Yes Icon
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Themes.IconNo">
+            <summary>
+            No Icon
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Themes.IconUp">
+            <summary>
+            Up Icon
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Themes.IconSave">
+            <summary>
+            Save Icon
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Themes.IconStar">
+            <summary>
+            Star Icon
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Themes.IconWarning">
+            <summary>
+            Warning icon
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Themes.IconQuestion">
+            <summary>
+            Question Icon
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Themes.IconHome">
+            <summary>
+            Home Icon
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.Themes.#ctor">
+            <summary>
+            Creates Themes instance
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.Themes.#ctor(Microsoft.Xna.Framework.Graphics.Texture2D,Microsoft.Xna.Framework.Graphics.SpriteFont)">
+            <summary>
+            Creates Themes instance
+            </summary>
+            <param name="skin">Skin Texture</param>
+            <param name="defaultFont">Default Font</param>
+        </member>
+        <member name="M:RamGecXNAControls.Themes.Save(System.String)">
+            <summary>
+            Saves serialized version of the current Theme instance
+            </summary>
+            <param name="path">Save file location and name</param>
+        </member>
+        <member name="T:RamGecXNAControls.Window">
+            <summary>
+            Window Control
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Window.Title">
+            <summary>
+            Window Title
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Window.TopMost">
+            <summary>
+            If set, the Window will be drown last (that is - on top of other windows).
+            If more than one Window is TopMost - the first added window will be on top
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Window.Movable">
+            <summary>
+            Allows user to move the window around
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Window.movePoint">
+            <summary>
+            Tracks mouse movement (for moving around the window)
+            </summary>
+        </member>
+        <member name="F:RamGecXNAControls.Window.titleHeight">
+            <summary>
+            Cached height of the title bar
+            </summary>
+        </member>
+        <member name="M:RamGecXNAControls.Window.#ctor(Microsoft.Xna.Framework.Rectangle,System.String,System.String)">
+            <summary>
+            Creates Window control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="title">Window title</param>
+            <param name="name">Control name</param>
+        </member>
+        <member name="M:RamGecXNAControls.Window.#ctor(Microsoft.Xna.Framework.Rectangle,System.String)">
+            <summary>
+            Creates Window control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+            <param name="title">Window title</param>
+        </member>
+        <member name="M:RamGecXNAControls.Window.#ctor(Microsoft.Xna.Framework.Rectangle)">
+            <summary>
+            Creates Window control
+            </summary>
+            <param name="bounds">Relative coordinates of the control</param>
+        </member>
+        <member name="M:RamGecXNAControls.Window.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Creates Window control and loads its data from XmlNode
+            </summary>
+            <param name="xmlNode">XmlNode containing control data</param>
+        </member>
+        <member name="P:RamGecXNAControls.Window.Font">
+            <summary>
+            Default Font
+            </summary>
+        </member>
+        <member name="P:RamGecXNAControls.Window.TitleColor">
+            <summary>
+            Window Title color
+            </summary>
+        </member>
+    </members>
+</doc>

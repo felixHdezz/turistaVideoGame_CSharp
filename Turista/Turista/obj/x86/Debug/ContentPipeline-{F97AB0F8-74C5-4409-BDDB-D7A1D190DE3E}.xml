@@ -1,0 +1,1207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Img\01.jpg</Source>
+      <Name>Img\01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\01.xnb</Output>
+      <Time>2015-06-27T13:26:02.08656-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\010.jpg</Source>
+      <Name>Img\010</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\010.xnb</Output>
+      <Time>2015-06-27T13:26:02.1865601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\011.jpg</Source>
+      <Name>Img\011</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\011.xnb</Output>
+      <Time>2015-06-27T13:26:02.1865601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\012.jpg</Source>
+      <Name>Img\012</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\012.xnb</Output>
+      <Time>2015-06-27T13:26:02.1965601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\013.jpg</Source>
+      <Name>Img\013</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\013.xnb</Output>
+      <Time>2015-06-27T13:26:02.1965601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\014.jpg</Source>
+      <Name>Img\014</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\014.xnb</Output>
+      <Time>2015-06-27T13:26:02.2065601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\015.jpg</Source>
+      <Name>Img\015</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\015.xnb</Output>
+      <Time>2015-06-27T13:26:02.2065601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\016.jpg</Source>
+      <Name>Img\016</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\016.xnb</Output>
+      <Time>2015-06-27T13:26:02.2165601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\017.jpg</Source>
+      <Name>Img\017</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\017.xnb</Output>
+      <Time>2015-06-27T13:26:02.2165601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\018.jpg</Source>
+      <Name>Img\018</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\018.xnb</Output>
+      <Time>2015-06-27T13:26:02.2265602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\019.jpg</Source>
+      <Name>Img\019</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\019.xnb</Output>
+      <Time>2015-06-27T13:26:02.2265602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\02.jpg</Source>
+      <Name>Img\02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\02.xnb</Output>
+      <Time>2015-06-27T13:26:02.10656-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\020.jpg</Source>
+      <Name>Img\020</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\020.xnb</Output>
+      <Time>2015-06-27T13:26:02.2465602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\021.jpg</Source>
+      <Name>Img\021</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\021.xnb</Output>
+      <Time>2015-06-27T13:26:02.2465602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\022.jpg</Source>
+      <Name>Img\022</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\022.xnb</Output>
+      <Time>2015-06-27T13:26:02.2565602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\023.jpg</Source>
+      <Name>Img\023</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\023.xnb</Output>
+      <Time>2015-06-27T13:26:02.2565602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\024.jpg</Source>
+      <Name>Img\024</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\024.xnb</Output>
+      <Time>2015-06-27T13:26:02.2665602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\025.jpg</Source>
+      <Name>Img\025</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\025.xnb</Output>
+      <Time>2015-06-27T13:26:02.2665602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\026.jpg</Source>
+      <Name>Img\026</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\026.xnb</Output>
+      <Time>2015-06-27T13:26:02.2765602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\027.jpg</Source>
+      <Name>Img\027</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\027.xnb</Output>
+      <Time>2015-06-27T13:26:02.2765602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\028.jpg</Source>
+      <Name>Img\028</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\028.xnb</Output>
+      <Time>2015-06-27T13:26:02.2865602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\029.jpg</Source>
+      <Name>Img\029</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\029.xnb</Output>
+      <Time>2015-06-27T13:26:02.2865602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\03.jpg</Source>
+      <Name>Img\03</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\03.xnb</Output>
+      <Time>2015-06-27T13:26:02.1565601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\030.jpg</Source>
+      <Name>Img\030</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\030.xnb</Output>
+      <Time>2015-06-27T13:26:02.2965602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\031.jpg</Source>
+      <Name>Img\031</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\031.xnb</Output>
+      <Time>2015-06-27T13:26:02.2965602-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\032.jpg</Source>
+      <Name>Img\032</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\032.xnb</Output>
+      <Time>2015-06-27T13:26:02.3065603-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\033.jpg</Source>
+      <Name>Img\033</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\033.xnb</Output>
+      <Time>2015-06-27T13:26:02.3065603-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\034.jpg</Source>
+      <Name>Img\034</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\034.xnb</Output>
+      <Time>2015-06-27T13:26:02.3165603-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\035.png</Source>
+      <Name>Img\035</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\035.xnb</Output>
+      <Time>2015-06-27T13:26:02.3165603-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\036.png</Source>
+      <Name>Img\036</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\036.xnb</Output>
+      <Time>2015-06-27T13:26:02.3265603-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\037.png</Source>
+      <Name>Img\037</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\037.xnb</Output>
+      <Time>2015-06-27T13:26:02.3265603-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\04.jpg</Source>
+      <Name>Img\04</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\04.xnb</Output>
+      <Time>2015-06-27T13:26:02.1565601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\05.jpg</Source>
+      <Name>Img\05</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\05.xnb</Output>
+      <Time>2015-06-27T13:26:02.1565601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\06.jpg</Source>
+      <Name>Img\06</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\06.xnb</Output>
+      <Time>2015-06-27T13:26:02.1665601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\07.jpg</Source>
+      <Name>Img\07</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\07.xnb</Output>
+      <Time>2015-06-27T13:26:02.1665601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\08.jpg</Source>
+      <Name>Img\08</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\08.xnb</Output>
+      <Time>2015-06-27T13:26:02.1765601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\09.jpg</Source>
+      <Name>Img\09</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\09.xnb</Output>
+      <Time>2015-06-27T13:26:02.1765601-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Ayuda.png</Source>
+      <Name>Img\Ayuda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Ayuda.xnb</Output>
+      <Time>2015-06-27T13:26:02.3265603-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Ayuda1.png</Source>
+      <Name>Img\Ayuda1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Ayuda1.xnb</Output>
+      <Time>2015-06-27T13:26:02.3365603-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Ban.png</Source>
+      <Name>Img\Ban</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Ban.xnb</Output>
+      <Time>2015-06-27T13:26:02.3365603-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\BaseDatos.png</Source>
+      <Name>Img\BaseDatos</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\BaseDatos.xnb</Output>
+      <Time>2015-06-27T13:26:02.3465603-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\BaseDatos1.png</Source>
+      <Name>Img\BaseDatos1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\BaseDatos1.xnb</Output>
+      <Time>2015-06-27T13:26:02.3465603-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_jugar.png</Source>
+      <Name>Img\btn_jugar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_jugar.xnb</Output>
+      <Time>2015-06-27T13:26:02.3965604-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_No.png</Source>
+      <Name>Img\btn_No</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_No.xnb</Output>
+      <Time>2015-07-02T14:07:50.8978149-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_Reanudar.png</Source>
+      <Name>Img\btn_Reanudar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_Reanudar.xnb</Output>
+      <Time>2015-06-27T13:26:02.3965604-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_salir.png</Source>
+      <Name>Img\btn_salir</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_salir.xnb</Output>
+      <Time>2015-06-27T13:26:02.4165604-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_Si.png</Source>
+      <Name>Img\btn_Si</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_Si.xnb</Output>
+      <Time>2015-07-02T14:07:52.8138431-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_tirar.png</Source>
+      <Name>Img\btn_tirar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_tirar.xnb</Output>
+      <Time>2015-07-04T09:31:33.8006289-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_volver.png</Source>
+      <Name>Img\btn_volver</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_volver.xnb</Output>
+      <Time>2015-06-27T13:26:02.4565605-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Creditos.png</Source>
+      <Name>Img\Creditos</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Creditos.xnb</Output>
+      <Time>2015-06-27T13:26:02.5765606-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Creditos1.png</Source>
+      <Name>Img\Creditos1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Creditos1.xnb</Output>
+      <Time>2015-06-27T13:26:02.5965607-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Equipo1.png</Source>
+      <Name>Img\Equipo1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Equipo1.xnb</Output>
+      <Time>2015-06-27T13:26:02.6465607-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Equipo2.png</Source>
+      <Name>Img\Equipo2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Equipo2.xnb</Output>
+      <Time>2015-06-27T13:26:02.6965608-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Equipo3.png</Source>
+      <Name>Img\Equipo3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Equipo3.xnb</Output>
+      <Time>2015-06-27T13:26:02.7365609-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Equipo4.png</Source>
+      <Name>Img\Equipo4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Equipo4.xnb</Output>
+      <Time>2015-06-27T13:26:02.7465609-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Equipo5.png</Source>
+      <Name>Img\Equipo5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Equipo5.xnb</Output>
+      <Time>2015-06-27T13:26:02.816561-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\FondoEquipo.png</Source>
+      <Name>Img\FondoEquipo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\FondoEquipo.xnb</Output>
+      <Time>2015-06-27T13:26:02.8865611-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\font2.png</Source>
+      <Name>Img\font2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\font2.xnb</Output>
+      <Time>2015-06-27T13:26:02.9365611-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Hotel.png</Source>
+      <Name>Img\Hotel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Hotel.xnb</Output>
+      <Time>2015-08-02T00:23:30.5669385-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\ImagenFondo.png</Source>
+      <Name>Img\ImagenFondo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\ImagenFondo.xnb</Output>
+      <Time>2015-06-27T13:26:03.0065612-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Img_Mundo.png</Source>
+      <Name>Img\Img_Mundo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Img_Mundo.xnb</Output>
+      <Time>2015-06-27T13:26:03.0265613-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\img_pausa.png</Source>
+      <Name>Img\img_pausa</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\img_pausa.xnb</Output>
+      <Time>2015-06-27T13:26:03.0365613-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Jugar.png</Source>
+      <Name>Img\Jugar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Jugar.xnb</Output>
+      <Time>2015-06-27T13:26:03.0365613-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Logo.png</Source>
+      <Name>Img\Logo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Logo.xnb</Output>
+      <Time>2015-06-27T13:26:03.0365613-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\NuevoJuego.png</Source>
+      <Name>Img\NuevoJuego</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\NuevoJuego.xnb</Output>
+      <Time>2015-06-27T13:26:03.0465613-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\NuevoJuego1.png</Source>
+      <Name>Img\NuevoJuego1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\NuevoJuego1.xnb</Output>
+      <Time>2015-06-27T13:26:03.0465613-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\opaco.png</Source>
+      <Name>Img\opaco</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\opaco.xnb</Output>
+      <Time>2015-06-27T13:26:03.0465613-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Opciones.png</Source>
+      <Name>Img\Opciones</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Opciones.xnb</Output>
+      <Time>2015-06-27T13:26:03.0565613-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Opciones1.png</Source>
+      <Name>Img\Opciones1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Opciones1.xnb</Output>
+      <Time>2015-06-27T13:26:03.0565613-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\OpcionesJuego.png</Source>
+      <Name>Img\OpcionesJuego</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\OpcionesJuego.xnb</Output>
+      <Time>2015-06-27T13:26:03.0665613-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Prueba5.png</Source>
+      <Name>Img\Prueba5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Prueba5.xnb</Output>
+      <Time>2015-06-27T13:26:03.0765613-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\ReanudarJuego.png</Source>
+      <Name>Img\ReanudarJuego</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\ReanudarJuego.xnb</Output>
+      <Time>2015-06-27T13:26:03.1165614-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\ReiniciarJuego.png</Source>
+      <Name>Img\ReiniciarJuego</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\ReiniciarJuego.xnb</Output>
+      <Time>2015-06-27T13:26:03.1165614-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Salir.png</Source>
+      <Name>Img\Salir</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Salir.xnb</Output>
+      <Time>2015-06-27T13:26:03.1265614-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Salir1.png</Source>
+      <Name>Img\Salir1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Salir1.xnb</Output>
+      <Time>2015-06-27T13:26:03.1265614-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Texto.png</Source>
+      <Name>Img\Texto</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Texto.xnb</Output>
+      <Time>2015-06-27T13:26:03.1365614-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Titulo.png</Source>
+      <Name>Img\Titulo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Titulo.xnb</Output>
+      <Time>2015-06-27T13:26:03.1365614-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Volver.png</Source>
+      <Name>Img\Volver</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Volver.xnb</Output>
+      <Time>2015-06-27T13:26:03.1365614-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\PasarMouse.wav</Source>
+      <Name>Sounds\PasarMouse</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Sounds\PasarMouse.xnb</Output>
+      <Time>2015-06-27T13:26:20.8446151-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\sound_click.wav</Source>
+      <Name>Sounds\sound_click</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Sounds\sound_click.xnb</Output>
+      <Time>2015-06-27T13:26:20.8746152-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Model\Dad.fbx</Source>
+      <Name>Model\Dad</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Model\Dad.xnb</Output>
+      <Time>2015-06-27T13:26:48.1037436-05:00</Time>
+      <Dependency>
+        <Key>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\obj\x86\Debug\Model\Dad_0.xml</Key>
+        <Value>2015-08-03T10:24:40.1874978-05:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Model\dado.FBX</Source>
+      <Name>Model\dado</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Model\dado.xnb</Output>
+      <Time>2015-06-27T13:26:48.1537437-05:00</Time>
+      <Dependency>
+        <Key>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\obj\x86\Debug\Model\dado_0.xml</Key>
+        <Value>2015-08-03T10:24:41.046547-05:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Model\dado2.FBX</Source>
+      <Name>Model\dado2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Model\dado2.xnb</Output>
+      <Time>2015-06-27T13:26:48.2137438-05:00</Time>
+      <Dependency>
+        <Key>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\obj\x86\Debug\Model\dado2_0.xml</Key>
+        <Value>2015-08-03T10:24:41.2955612-05:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Model\PruebaDado.fbx</Source>
+      <Name>Model\PruebaDado</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Model\PruebaDado.xnb</Output>
+      <Time>2015-06-27T13:26:48.3337439-05:00</Time>
+      <Dependency>
+        <Key>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\obj\x86\Debug\Model\PruebaDado_0.xml</Key>
+        <Value>2015-08-03T10:24:45.2737888-05:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>fuente.spritefont</Source>
+      <Name>fuente</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\fuente.xnb</Output>
+      <Time>2015-07-09T14:41:56.1924271-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Fuente11.spritefont</Source>
+      <Name>Fuente11</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Fuente11.xnb</Output>
+      <Time>2015-07-09T22:09:43.2787249-05:00</Time>
+    </Item>
+    <Item>
+      <Source>fuenteGrande.spritefont</Source>
+      <Name>fuenteGrande</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\fuenteGrande.xnb</Output>
+      <Time>2015-07-09T22:09:57.7287764-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Model\Dad.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\obj\x86\Debug\Model\Dad_0.xml</Output>
+      <Time>2015-06-27T13:26:48.1037436-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Model\dado.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\obj\x86\Debug\Model\dado_0.xml</Output>
+      <Time>2015-06-27T13:26:48.1537437-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Model\dado2.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\obj\x86\Debug\Model\dado2_0.xml</Output>
+      <Time>2015-06-27T13:26:48.2137438-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Model\PruebaDado.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\obj\x86\Debug\Model\PruebaDado_0.xml</Output>
+      <Time>2015-06-27T13:26:48.3337439-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_aceptar.png</Source>
+      <Name>Img\btn_aceptar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_aceptar.xnb</Output>
+      <Time>2015-07-02T14:03:56.2629303-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_equipo.png</Source>
+      <Name>Img\btn_equipo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_equipo.xnb</Output>
+      <Time>2015-07-02T09:53:31.6342797-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\brn_PreguntarEquipo.png</Source>
+      <Name>Img\brn_PreguntarEquipo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\brn_PreguntarEquipo.xnb</Output>
+      <Time>2015-07-02T14:03:55.0709274-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_Cancelar.png</Source>
+      <Name>Img\btn_Cancelar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_Cancelar.xnb</Output>
+      <Time>2015-07-17T02:21:14.0077961-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_ResNo.png</Source>
+      <Name>Img\btn_ResNo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_ResNo.xnb</Output>
+      <Time>2015-07-06T13:15:32.856648-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_ResSI.png</Source>
+      <Name>Img\btn_ResSI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_ResSI.xnb</Output>
+      <Time>2015-07-06T13:15:34.3517335-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_PreguntarEquipo.png</Source>
+      <Name>Img\btn_PreguntarEquipo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_PreguntarEquipo.xnb</Output>
+      <Time>2015-07-08T01:22:56.2705576-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_Contestar.png</Source>
+      <Name>Img\btn_Contestar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_Contestar.xnb</Output>
+      <Time>2015-07-08T01:19:29.7791044-05:00</Time>
+    </Item>
+    <Item>
+      <Source>fuentetiempo.spritefont</Source>
+      <Name>fuentetiempo</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\fuentetiempo.xnb</Output>
+      <Time>2015-07-09T13:55:06.6363528-05:00</Time>
+    </Item>
+    <Item>
+      <Source>FuenteAviso.spritefont</Source>
+      <Name>FuenteAviso</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\FuenteAviso.xnb</Output>
+      <Time>2015-07-27T09:57:49.4710151-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Img_aviso.png</Source>
+      <Name>Img\Img_aviso</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Img_aviso.xnb</Output>
+      <Time>2015-07-14T09:50:03.8009573-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_modificar.png</Source>
+      <Name>Img\btn_modificar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_modificar.xnb</Output>
+      <Time>2015-07-17T02:21:14.057799-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_finalizar.png</Source>
+      <Name>Img\btn_finalizar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_finalizar.xnb</Output>
+      <Time>2015-07-19T17:27:44.8949558-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Barra.png</Source>
+      <Name>Img\Barra</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Barra.xnb</Output>
+      <Time>2015-07-21T01:29:34.8889831-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_cerrar.png</Source>
+      <Name>Img\btn_cerrar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_cerrar.xnb</Output>
+      <Time>2015-07-21T02:04:10.3496927-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\logo_uthh.png</Source>
+      <Name>Img\logo_uthh</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\logo_uthh.xnb</Output>
+      <Time>2015-07-21T10:16:55.7076172-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\logo_tic.png</Source>
+      <Name>Img\logo_tic</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\logo_tic.xnb</Output>
+      <Time>2015-07-21T11:23:55.7799591-05:00</Time>
+    </Item>
+    <Item>
+      <Source>FuenteAviso1.spritefont</Source>
+      <Name>FuenteAviso1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\FuenteAviso1.xnb</Output>
+      <Time>2015-07-28T01:09:28.3166488-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Hotel 2.png</Source>
+      <Name>Img\Hotel 2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Hotel 2.xnb</Output>
+      <Time>2015-08-01T22:44:09.2137589-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_penalizar.png</Source>
+      <Name>Img\btn_penalizar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_penalizar.xnb</Output>
+      <Time>2015-08-02T12:46:00.8814273-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_modovideo.png</Source>
+      <Name>Img\btn_modovideo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_modovideo.xnb</Output>
+      <Time>2015-08-02T18:00:30.6702166-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_resolucion.png</Source>
+      <Name>Img\btn_resolucion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_resolucion.xnb</Output>
+      <Time>2015-08-02T18:00:31.0532385-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_pausar.png</Source>
+      <Name>Img\btn_pausar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_pausar.xnb</Output>
+      <Time>2015-08-02T18:00:30.869228-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_vertabla.png</Source>
+      <Name>Img\btn_vertabla</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_vertabla.xnb</Output>
+      <Time>2015-08-02T18:00:30.0601817-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_aplicar.png</Source>
+      <Name>Img\btn_aplicar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_aplicar.xnb</Output>
+      <Time>2015-08-02T19:03:55.1388198-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_VolverOpciones.png</Source>
+      <Name>Img\btn_VolverOpciones</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_VolverOpciones.xnb</Output>
+      <Time>2015-08-02T19:03:55.1358196-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_sonido.png</Source>
+      <Name>Img\btn_sonido</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_sonido.xnb</Output>
+      <Time>2015-08-02T19:20:22.402726-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Pre2.png</Source>
+      <Name>Img\Pre2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Pre2.xnb</Output>
+      <Time>2015-08-05T11:45:46.049775-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Pres1.png</Source>
+      <Name>Img\Pres1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Pres1.xnb</Output>
+      <Time>2015-08-05T11:45:46.1847752-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Pres3.png</Source>
+      <Name>Img\Pres3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Pres3.xnb</Output>
+      <Time>2015-08-05T11:45:46.1847752-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Pres4.png</Source>
+      <Name>Img\Pres4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Pres4.xnb</Output>
+      <Time>2015-08-05T11:45:46.1897752-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Pres5.png</Source>
+      <Name>Img\Pres5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Pres5.xnb</Output>
+      <Time>2015-08-05T11:45:46.1947753-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Pres6.png</Source>
+      <Name>Img\Pres6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Pres6.xnb</Output>
+      <Time>2015-08-05T11:45:46.2347753-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Pres2.png</Source>
+      <Name>Img\Pres2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Pres2.xnb</Output>
+      <Time>2015-08-05T11:55:26.2943477-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_atras.png</Source>
+      <Name>Img\btn_atras</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_atras.xnb</Output>
+      <Time>2015-08-05T12:07:28.1653386-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\btn_siguiente.png</Source>
+      <Name>Img\btn_siguiente</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\btn_siguiente.xnb</Output>
+      <Time>2015-08-05T12:07:28.1653386-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Img\Avion.png</Source>
+      <Name>Img\Avion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\Img\Avion.xnb</Output>
+      <Time>2015-08-14T14:06:26.2771128-05:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{F97AB0F8-74C5-4409-BDDB-D7A1D190DE3E}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\TuristaContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\usuario\Documents\Visual Studio 2012\Projects\Turista\Turista\Turista\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-03-02T23:13:21.2762215-06:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

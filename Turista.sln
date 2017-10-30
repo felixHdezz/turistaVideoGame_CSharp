@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Turista", "Turista\Turista\Turista.csproj", "{1F86F088-2485-4A01-A72D-F3B0F094D6E2}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "TuristaContent", "Turista\TuristaContent\TuristaContent.contentproj", "{F97AB0F8-74C5-4409-BDDB-D7A1D190DE3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F86F088-2485-4A01-A72D-F3B0F094D6E2}.Debug|x86.ActiveCfg = Debug|x86
+		{1F86F088-2485-4A01-A72D-F3B0F094D6E2}.Debug|x86.Build.0 = Debug|x86
+		{1F86F088-2485-4A01-A72D-F3B0F094D6E2}.Release|x86.ActiveCfg = Release|x86
+		{1F86F088-2485-4A01-A72D-F3B0F094D6E2}.Release|x86.Build.0 = Release|x86
+		{F97AB0F8-74C5-4409-BDDB-D7A1D190DE3E}.Debug|x86.ActiveCfg = Debug|x86
+		{F97AB0F8-74C5-4409-BDDB-D7A1D190DE3E}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
