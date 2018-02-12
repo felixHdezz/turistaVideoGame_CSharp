@@ -197,7 +197,8 @@ namespace Turista
         string Indice = "";
         Texture2D Hotel;
         public bool MostrarHotel;
-        int PosX = 0, PosY = 0;
+        int PosX = 0, 
+            PosY = 0;
         public ColocarHotel(Texture2D hotel)
         {
             Hotel = hotel;
@@ -231,9 +232,11 @@ namespace Turista
         List<Texture2D> Hoteles = new List<Texture2D>();
         Texture2D td_FondoPausa;
         Rectangle rec_pausa;
-        Texture2D td_barra,vertabla;
-        Texture2D td_FondobarraEquipo;
-        Texture2D fondo1,avion;
+        Texture2D td_barra,
+                  vertabla,
+                  td_FondobarraEquipo,
+                  fondo1,
+                  avion;
         Texture2D mexico, goo, paga, colmexico, banco, hotel, Img_Aviso, Hotel;
         Vector2 tileDimensions = Vector2.Zero;
         public Botones btnPreguntarEquipo, btn_Contestar, btn_TirarDado, btn_si, btn_no,
@@ -265,10 +268,6 @@ namespace Turista
             PreHidalgo = 100, PreGuanajuato = 250, PreMichoacan = 150, PreJalisco = 200, PreMorelos = 100, PreNayarit =150, PreNuevoL = 200, PreOxaca = 100, PrePuebla = 300,
             PreQueretaro = 200, PreQuintanaro = 300, PreSanLuis = 200, PreSinaloa = 250, PreSonora = 300, PreTabasco = 200, PreTamaul = 150, PreTlaxcala = 200, PreVeracruz = 250,
             PreYucatan = 250, PreZacatecas = 150, Prechiapas = 250, PreCampeche = 200, PreCaliforni = 300, PreCaliforSur = 250, PreAguascali = 200, PreDistrito = 150;
-        //public  string col = "Colima", duran = "Durango", coah = "Coahuia", chihu = "Chihuahua", EdMex = "Edo. Mexico", guerre = "Guerrero", hidal = "Hidalgo", guana = "Guanajuato",
-        //       micho = "Michoacan", jalis = "Jalisco", mor = "Morelos", naya = "Nayarit", nleon = "Nuevo Leon", oxa = "Oxaca", pueb = "Puebla", quere = "Qurretaro", quint = "Quintanaro",
-        //       sanl = "San luis", sina = "Sinaloa", sono = "Sonora", tab = "Tabasco", tama = "Tamaulipas", tlax = "Tlaxcala", vera = "Veracruz", yuca = "Yucatan", zaca = "Zacatecas", chi = "Chiapas",
-        //       cam = "Campeche", cali = "California", cli_S = "California Sur", aguas = "Aguascalientes", dis = "Distrito";
         string Tema, IdTema;
         string[,] Pregun_Resp;
         public int EstadoActualEquipo = 0;
