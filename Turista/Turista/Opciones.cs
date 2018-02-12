@@ -19,10 +19,19 @@ namespace Turista
     {
         GUIManager guimanager;
         Window windows;
-        SpriteFont fuete,fuenteTitulo;
-        SoundEffect sound_click, sound_pasmouse;
-        Texture2D Resolucion, ModoVideo, Pausar, Vertabla;
-        public Botones btn_Resolucion, btn_ModoVideo, btn_sonido, btn_aplicar, btn_volver;
+        SpriteFont fuete,
+                   fuenteTitulo;
+        SoundEffect sound_click, 
+                    sound_pasmouse;
+        Texture2D Resolucion, 
+                  ModoVideo, 
+                  Pausar,
+                  Vertabla;
+        public Botones btn_Resolucion, 
+                       btn_ModoVideo, 
+                       btn_sonido, 
+                       btn_aplicar, 
+                       btn_volver;
         public bool PantallaCompleta, volver = false, aplicar = false, AplicarSonido = false, AplicarIsFullScreen = false, Modificar = false;
         string[] Resoluciones = new string[3];
         string[] ModoPantalla = new string[2];
@@ -38,24 +47,18 @@ namespace Turista
             Sonido[0] = "Si";
             Sonido[1] = "No";
             PantallaCompleta = isfullscreen;
-            if (PantallaCompleta == true)
-            {
+            if (PantallaCompleta == true) {
                 IndiceModoPantalla = 0;
-            }
-            else {
+            } else {
                 IndiceModoPantalla = 1;
             }
-            if (Convert.ToBoolean(ConfigurationManager.AppSettings["Sonido"]) == true)
-            {
+            if (Convert.ToBoolean(ConfigurationManager.AppSettings["Sonido"]) == true) {
                 IndiceSonido = 0;
-            }
-            else {
+            } else {
                 IndiceSonido = 1;
             }
-            for (int x = 0; x < Resoluciones.Length; x++)
-            {
-                if (Convert.ToInt32(ConfigurationManager.AppSettings["AnchoPantalla"]) == Int32.Parse(Resoluciones[x].Substring(0, 4)))
-                {
+            for (int x = 0; x < Resoluciones.Length; x++) {
+                if (Convert.ToInt32(ConfigurationManager.AppSettings["AnchoPantalla"]) == Int32.Parse(Resoluciones[x].Substring(0, 4))) {
                     IndiceResolucion = x;
                 }
             }
@@ -86,70 +89,47 @@ namespace Turista
         }
         public void Update(GameTime time, MouseState MouseAct, MouseState MouseAnt, bool ventanaAct)
         {
-            if (btn_Resolucion.isClicked == true)
-            {
+            if (btn_Resolucion.isClicked == true) {
                 btn_Resolucion.isClicked = false;
-                if (IndiceResolucion < Resoluciones.Length - 1)
-                {
+                if (IndiceResolucion < Resoluciones.Length - 1) {
                     IndiceResolucion++;
-                }
-                else
-                {
+                } else {
                     IndiceResolucion = 0;
                 }
             }
-            if (btn_ModoVideo.isClicked == true)
-            {
+            if (btn_ModoVideo.isClicked == true) {
                 btn_ModoVideo.isClicked = false;
-                if (IndiceModoPantalla < ModoPantalla.Length - 1)
-                {
+                if (IndiceModoPantalla < ModoPantalla.Length - 1) {
                     IndiceModoPantalla++;
-                }
-                else
-                {
+                } else {
                     IndiceModoPantalla = 0;
                 }
-
             }
-            if (btn_sonido.isClicked == true)
-            {
+            if (btn_sonido.isClicked == true) {
                 btn_sonido.isClicked = false;
-                if (IndiceSonido < Sonido.Length - 1)
-                {
+                if (IndiceSonido < Sonido.Length - 1) {
                     IndiceSonido++;
-                }
-                else
-                {
+                } else {
                     IndiceSonido = 0;
                 }
             }
-            
-            if (Sonido[IndiceSonido] == "Si")
-            {
+            if (Sonido[IndiceSonido] == "Si") {
                 AplicarSonido = true;
-            }
-            else
-            {
+            } else {
                 AplicarSonido = false;
             }
-            if (ModoPantalla[IndiceModoPantalla] == "Pantalla Completa")
-            {
+            if (ModoPantalla[IndiceModoPantalla] == "Pantalla Completa"){
                 AplicarIsFullScreen = true;
-            }
-            else
-            {
-                if (ModoPantalla[IndiceModoPantalla] == "Ventana")
-                {
+            } else {
+                if (ModoPantalla[IndiceModoPantalla] == "Ventana") {
                     AplicarIsFullScreen = false;
                 }
             }
-            if (btn_volver.isClicked == true)
-            {
+            if (btn_volver.isClicked == true) {
                 btn_volver.isClicked = false;
                 volver = true;
             }
-            if (btn_aplicar.isClicked == true)
-            {
+            if (btn_aplicar.isClicked == true) {
                 VerificaSeleccion();
                 Modificar = true;
             }
@@ -161,10 +141,8 @@ namespace Turista
         }
         public void VerificaSeleccion()
         {
-            for (int x = 0; x < Resoluciones.Length; x++)
-            {
-                if (IndiceResolucion == x)
-                {
+            for (int x = 0; x < Resoluciones.Length; x++) {
+                if (IndiceResolucion == x) {
                     Ancho = Convert.ToInt32(Resoluciones[x].Substring(0, 4));
                     Alto = Convert.ToInt32(Resoluciones[x].Substring(7, 3));
                 }
