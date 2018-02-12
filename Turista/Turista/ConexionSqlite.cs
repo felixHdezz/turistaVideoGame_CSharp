@@ -34,9 +34,8 @@ namespace Turista
             int n = dt.Rows.Count;
             string[] arr_datos = new string[n];
             DataRow renglon;
-            for (int i = 0; i < n; i++)
-            {
-                renglon = dt.Rows[i];//fila
+            for (int i = 0; i < n; i++) {
+                renglon = dt.Rows[i];
                 arr_datos[i] = renglon[campo].ToString();
             }
             return arr_datos;
