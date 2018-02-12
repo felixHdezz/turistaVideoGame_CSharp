@@ -17,7 +17,9 @@ namespace Turista
         DibujaEquipo[] Equipos;
         SpriteFont fuente;
         Game game;
-        public Botones btn_modificar, btn_cancelar,btn_penalizacion;
+        public Botones btn_modificar, 
+                       btn_cancelar,
+                       btn_penalizacion;
         Texture2D t2d_fondo;
         public int Equipo_Actual;
         string[] NomEquipos, FondoEquipos;
@@ -30,8 +32,7 @@ namespace Turista
             FondoEquipos = new string[Equipos.Length];
             t2d_fondo = g.Content.Load<Texture2D>("Img/opaco");
             fuente = g.Content.Load<SpriteFont>("fuente");
-            for (int con = 0; con < Equipos.Length; con++)
-            {
+            for (int con = 0; con < Equipos.Length; con++) {
                 NomEquipos[con] = Equipos[con].nombreequipo;
                 FondoEquipos[con] = Equipos[con].Fondo.ToString();
             }
@@ -44,31 +45,24 @@ namespace Turista
             groupBoxEquipos.Transparency = 0;
             VentanaWindos.Controls.Add(groupBoxEquipos);
             int posY = 15;
-            for (int con = 0; con < Equipos.Length; con++)
-            {
+            for (int con = 0; con < Equipos.Length; con++) {
                 TextBox txtNombreEquipo = new TextBox(new Rectangle(20, posY, 200, 24), Equipos[con].nombreequipo, "txt" + con);
                 TextBox txtFondoEquipo = new TextBox(new Rectangle(250, posY, 100, 24), Convert.ToString(Equipos[con].Fondo), "txtF" + con);
                 RadioButton RadioButton_Turno = new RadioButton(new Rectangle(400, posY + 2, 20, 20), "", "rdb" + con);
                 RadioButton_Turno.Group = 10;
-                if (con == Equipo_Actual)
-                {
+                if (con == Equipo_Actual) {
                     RadioButton_Turno.Checked = true;
-                }
-                else
-                {
+                } else {
                     RadioButton_Turno.Checked = false;
                 }
-                txtNombreEquipo.OnTextChanged += (hola) =>
-                {
+                txtNombreEquipo.OnTextChanged += (hola) => {
                     int Numcaja = int.Parse(txtNombreEquipo.Name.Substring(3, 1));
-                    if (txtNombreEquipo.Text.Length > 10)
-                    {
+                    if (txtNombreEquipo.Text.Length > 10) {
                         txtNombreEquipo.Text = txtNombreEquipo.Text.Substring(0, 10);
                     }
                     NomEquipos[Numcaja] = txtNombreEquipo.Text;
                 };
-                txtFondoEquipo.OnTextChanged += (hola) =>
-                {
+                txtFondoEquipo.OnTextChanged += (hola) => {
                     int NumCaja = Convert.ToInt32(txtFondoEquipo.Name.Substring(4, 1));
                     FondoEquipos[NumCaja] = txtFondoEquipo.Text;
                 };
@@ -102,8 +96,7 @@ namespace Turista
         public void Update(GameTime gt, MouseState mouseAct, MouseState mouseAnt, bool ventanaActiva)
         {
             guimanager.Update(gt);
-            if (btn_modificar.isClicked == true)
-            {
+            if (btn_modificar.isClicked == true) {
                 Modificar();
                 btn_modificar.isClicked = false;
                 CambiosGuardados = true;
@@ -125,50 +118,35 @@ namespace Turista
         {
             bool HayUnPuntajeMal = false;
             string EquipoConPuntMal = "";
-            for (int i = 0; i < FondoEquipos.Length; i++)
-            {
-                if (FondoEquipos[i] != null)
-                {
+            for (int i = 0; i < FondoEquipos.Length; i++) {
+                if (FondoEquipos[i] != null) {
                     int num;
                     bool sePuedeConvertir = int.TryParse(FondoEquipos[i], out num);
-                    if (sePuedeConvertir)
-                    {
+                    if (sePuedeConvertir) {
                         Equipos[i].Fondo = num;
-                    }
-                    else
-                    {
+                    } else {
                         HayUnPuntajeMal = true;
                         EquipoConPuntMal = (VentanaWindos.GetControl("txt" + i) as TextBox).Text;
                         i = FondoEquipos.Length;
                     }
                 }
             }
-
-            if (HayUnPuntajeMal)
-            {
+            if (HayUnPuntajeMal)  {
                 (VentanaWindos.GetControl("lblaviso") as Label).Text = "El equipo \"" + EquipoConPuntMal + "\" tiene un puntaje no válido!";
                 (VentanaWindos.GetControl("lblaviso") as Label).Visible = true;
-            }
-            else
-            {
+            } else {
                 (VentanaWindos.GetControl("lblaviso") as Label).Visible = false;
             }
-            for (int i = 0; i < NomEquipos.Length; i++)
-            {
+            for (int i = 0; i < NomEquipos.Length; i++) {
                 Equipos[i].nombreequipo = NomEquipos[i];
-                if ((VentanaWindos.GetControl("rdb" + i) as RadioButton).Checked == true)
-                {
+                if ((VentanaWindos.GetControl("rdb" + i) as RadioButton).Checked == true) {
                     Equipo_Actual = i;
                 }
             }
-            for (int i = 0; i < Equipos.Length; i++)
-            {
-                if (i == Equipo_Actual)
-                {
+            for (int i = 0; i < Equipos.Length; i++) {
+                if (i == Equipo_Actual) {
                     Equipos[i].ActualEquipo = true;
-                }
-                else
-                {
+                } else {
                     Equipos[i].ActualEquipo = false;
                 }
             }
