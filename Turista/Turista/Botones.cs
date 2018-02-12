@@ -16,8 +16,10 @@ namespace Turista
     {
         Texture2D textura;
         Vector2 posicion;
-        SoundEffect sound_Pasmouse, sound_Click;
-        Rectangle rectanguloBoton, rectanguloIsOver;
+        SoundEffect sound_Pasmouse, 
+                    sound_Click;
+        Rectangle rectanguloBoton, 
+                  rectanguloIsOver;
         Color color = new Color(255, 255, 255, 255),
         colorSeleccionado = new Color(137, 144, 158),
         colorDeseleccionado = new Color(255, 255, 255, 255);
@@ -36,34 +38,24 @@ namespace Turista
         public void Update(MouseState mouseAct, MouseState mouseAnt, bool ventanaActiva)
         {
             Rectangle RectanguloMouse = new Rectangle(mouseAct.X, mouseAct.Y, 1, 1);
-            if (RectanguloMouse.Intersects(rectanguloIsOver))
-            {
+            if (RectanguloMouse.Intersects(rectanguloIsOver)) {
                 color = colorSeleccionado;
                 veces = veces + 1;
-                if (veces == 1 && Reproducir == true)
-                {
+                if (veces == 1 && Reproducir == true) {
                     sound_Pasmouse.Play();
                 }
-                //sound_Pasmouse.Play();
-                if (mouseAct.LeftButton == ButtonState.Pressed && mouseAnt.LeftButton == ButtonState.Released && ventanaActiva)
-                {
+                if (mouseAct.LeftButton == ButtonState.Pressed && mouseAnt.LeftButton == ButtonState.Released && ventanaActiva) {
                     isClicked = true;
-                    if (Reproducir == true)
-                    {
+                    if (Reproducir == true){
                         sound_Click.Play();
                     }
                 }
-            }
-            else
-            {
+            } else {
                 veces = 0;
-                if (Forzar_isClicked)
-                {
+                if (Forzar_isClicked) {
                     Forzar_isClicked = false;
                     isClicked = true;
-                }
-                else
-                {
+                } else {
                     color = colorDeseleccionado;
                     isClicked = false;
                     Forzar_isClicked = false;
