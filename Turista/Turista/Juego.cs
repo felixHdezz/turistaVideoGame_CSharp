@@ -40,15 +40,12 @@ namespace Turista
         }
         public void Draw(SpriteBatch batch)
         {
-            if (ActualEquipo)
-            {
+            if (ActualEquipo) {
                 batch.Draw(Equipo, new Rectangle(pos, 4, 40, 70), Color.White);
                 batch.DrawString(fuente, "Equipo :" + nombreequipo, PosicionTexto, Color.White);
                 batch.DrawString(fuente, "Fondo  : $" + Fondo, new Vector2(posicionTexto, 30), Color.White);
                 batch.DrawString(fuente, "Vueltas : " + NumeroVueltas, new Vector2(posicionTexto, 50), Color.White);
-            }
-            else
-            {
+            } else {
                 batch.Draw(Equipo, new Rectangle(pos, 4, 40, 70), Color.White);
                 batch.DrawString(fuente, "Equipo :" + nombreequipo, PosicionTexto, Color.White);
                 batch.DrawString(fuente, "Fondo  : $" + Fondo, new Vector2(posicionTexto, 30), Color.White);
@@ -79,101 +76,68 @@ namespace Turista
         public void Update(GameTime time,int actual)
         {
             actualimagen = actual;
-            if (Mover == true)
-            {
+            if (Mover == true) {
                 ActualizarFondo = true;
-                if (actualimagen == 0)
-                {
-                    if (PosX > 240 && posY <= 260)
-                    {
+                if (actualimagen == 0) {
+                    if (PosX > 240 && posY <= 260) {
                         PosX -= 36;
                         posY += 15;
-                    }
-                    else
-                    {
+                    } else {
                         Quitar = true;
                     }
                 }
-                if (actualimagen == 1)
-                {
-                    if (PosX > 200 && posY <= 260)
-                    {
+                if (actualimagen == 1) {
+                    if (PosX > 200 && posY <= 260) {
                         PosX -= 35;
                         posY += 6;
-                    }
-                    else
-                    {
+                    } else {
                         Quitar = true;
                     }
                 }
-                if (actualimagen == 2)
-                {
-                    if (PosX > 450 && posY > 260)
-                    {
+                if (actualimagen == 2) {
+                    if (PosX > 450 && posY > 260) {
                         PosX -= 30;
                         posY += 1;
-                    }
-                    else
-                    {
+                    } else {
                         Quitar = true;
                     }
                 }
-                if (actualimagen == 3)
-                {
-                    if (PosX > 450 && posY > 260)
-                    {
+                if (actualimagen == 3) {
+                    if (PosX > 450 && posY > 260) {
                         PosX -= 30;
-                    }
-                    else
-                    {
+                    } else {
                         Quitar = true;
                     }
                 }
-                if (actualimagen == 4)
-                {
-                    if (PosX > 450 && posY > 260)
-                    {
+                if (actualimagen == 4) {
+                    if (PosX > 450 && posY > 260 {
                         PosX -= 30;
                         posY -= 2;
-                    }
-                    else
-                    {
+                    } else {
                         Quitar = true;
                     }
                 }
-                if (actualimagen == 5)
-                {
-                    if (PosX >= 450 && posY > 260)
-                    {
+                if (actualimagen == 5) {
+                    if (PosX >= 450 && posY > 260) {
                         PosX -= 30;
                         posY -= 5;
-                    }
-                    else
-                    {
+                    } else {
                         Quitar = true;
                     }
                 }
-                if (actualimagen == 6)
-                {
-                    if (PosX >= 450 && posY > 260)
-                    {
+                if (actualimagen == 6) {
+                    if (PosX >= 450 && posY > 260) {
                         PosX -= 30;
                         posY -= 8;
-                    }
-                    else
-                    {
+                    } else {
                         Quitar = true;
                     }
                 }
-                if (actualimagen == 7)
-                {
-                    if (PosX >= 450 && posY > 260)
-                    {
+                if (actualimagen == 7) {
+                    if (PosX >= 450 && posY > 260) {
                         PosX -= 30;
                         posY -= 15;
-                    }
-                    else
-                    {
+                    } else {
                         Quitar = true;
                     }
                 }
@@ -181,14 +145,10 @@ namespace Turista
         }
         public void Draw(SpriteBatch batch)
         {
-            if (Quitar != true)
-            {
+            if (Quitar != true) {
                 batch.Draw(Equipo, new Rectangle(PosX, posY, 100, 60), Color.White);
                 batch.DrawString(fuente, "$" + Convert.ToString(Fondo), new Vector2(1005, PosText + 10), Color.White);
                 batch.DrawString(fuente, nombreequipo, new Vector2(1080, PosText + 10), Color.White);
-            }
-            else { 
-                
             }
         }
     }
@@ -219,8 +179,7 @@ namespace Turista
     }
     class Juego : Var
     {
-        enum EstadoJuego
-        {
+        enum EstadoJuego {
             Jugando,
             Pausa,
             OpcionesJugando
@@ -364,8 +323,7 @@ namespace Turista
             VentanaWindows.Movable = false;
             guimanager.Controls.Add(VentanaWindows);
 
-            for (int x = 0; x < 32; x++)
-            {
+            for (int x = 0; x < 32; x++) {
                 Estados.Add(game.Content.Load<Texture2D>("Img/0" + (x + 1)));
             }
             fondo1 = game.Content.Load<Texture2D>("Img/Prueba5");
@@ -375,13 +333,11 @@ namespace Turista
             avion = game.Content.Load<Texture2D>("Img/avion");
             colmexico = game.Content.Load<Texture2D>("Img/036");
             paga = game.Content.Load<Texture2D>("Img/037");
-            for (int x = 0; x < 32; x++)
-            {
+            for (int x = 0; x < 32; x++)  {
                 Hoteles.Add(game.Content.Load<Texture2D>("Img/Hotel"));
             }
             cHotel = new ColocarHotel[Hoteles.Count];
-            for (int x = 0; x < cHotel.Length; x++)
-            {
+            for (int x = 0; x < cHotel.Length; x++) {
                 cHotel[x] = new ColocarHotel(Hoteles[x]);
                 cHotel[x].MostrarHotel = false;
             }
@@ -411,8 +367,7 @@ namespace Turista
             Vector2 PosicionTexto;
             float posisciontext = 50;
             int posi = 4;
-            for (int x = 0; x < arrayEquipo.Length; x++)
-            {
+            for (int x = 0; x < arrayEquipo.Length; x++) {
                 PosicionTexto = new Vector2(posisciontext, 4);
                 Equipo[x] = new DibujaEquipo(arrayEquipo[x],x, posi, posisciontext, PosicionTexto, fuente, equipos[x], td_FondobarraEquipo);
                 posisciontext += 250;
@@ -423,8 +378,7 @@ namespace Turista
             cJugador = new Jugador[NombreEquipos.Length];
             variable = new Var();
             int con = 2;
-            for (int x = NombreEquipos.Length - 1; x >= 0; x--)
-            {
+            for (int x = NombreEquipos.Length - 1; x >= 0; x--) {
                 cJugador[x] = new Jugador(Posicion, posImagen, PosEsquina, equipos[x], NombreEquipos.Length, con);
                 con += 20;
             }
@@ -489,65 +443,50 @@ namespace Turista
         int TiempoMover;
         public void Update(GameTime gameTime, MouseState MouseAct, MouseState MouseAnt, bool ventanaAct)
         {
-            switch (EstadoJuegoActual)
-            {
+            switch (EstadoJuegoActual) {
                 case EstadoJuego.Jugando:
-                    if (Pausa != true || EstadoJugando !="finalizar_Juego")
-                    {
-                        if (tirardado == true)
-                        {
+                    if (Pausa != true || EstadoJugando !="finalizar_Juego") {
+                        if (tirardado == true) {
                             angle += 0.04f;
                             TiempoMover++;
                         }
-                        if (tirardado == false)
-                        {
+                        if (tirardado == false) {
                             CronometroDado += gameTime.ElapsedGameTime.TotalSeconds;
-                            if (CronometroDado > 3)
-                            {
+                            if (CronometroDado > 3) {
                                 angle = 0;
                                 CronometroDado = 0;
                             }
                         }
-
-                        if (btn_TirarDado.isClicked == true)
-                        {
+                        if (btn_TirarDado.isClicked == true) {
                             btn_TirarDado.isClicked = false;
                             Random ran = new Random();
                             NumCaidoDado = ran.Next(1, 6);
                             tirardado = true;
                         }
-                        if (AvanzarEquipo == true)
-                        {
+                        if (AvanzarEquipo == true) {
                             CronometroAvanza += gameTime.ElapsedGameTime.TotalSeconds;
-                            if (CronometroAvanza > 1)
-                            {
+                            if (CronometroAvanza > 1) {
                                 CronometroAvanza = 0;
                                 AvanzarEquipo = false;
                                 modo = "Avanzando";
                                 cJugador[EstadoActualEquipo].jugadorActual = EstadoActualEquipo;
                                 cJugador[EstadoActualEquipo].AvanzaJugador(NumCaidoDado);
                                 Equipo[EstadoActualEquipo].NumeroVueltas = cJugador[EstadoActualEquipo].NumVueltas;
-                                if (cJugador[EstadoActualEquipo].MensajePorPasarMexico == true)
-                                {
+                                if (cJugador[EstadoActualEquipo].MensajePorPasarMexico == true) {
                                     cJugador[EstadoActualEquipo].MensajePorPasarMexico = false;
                                     avisos("       Bonifición $200 al pasar Mexico", "Equipo : " + Equipo[EstadoActualEquipo].nombreequipo + "Fondo Total: " + Equipo[EstadoActualEquipo].Fondo, "", Color.Red, "Pasar_por_Mexico");
                                 }
                             }
                         }
-                        if (EstadoJugando == "MostrarMensajeEstado" || EstadoJugando == "MuestraPregunta" || tirardado == true)
-                        {
+                        if (EstadoJugando == "MostrarMensajeEstado" || EstadoJugando == "MuestraPregunta" || tirardado == true) {
                             //btn_TirarDado.Update(MouseAct, MouseAnt, ventanaAct);
-                        }
-                        else
-                        {
+                        } else {
                             btn_TirarDado.Update(MouseAct, MouseAnt, ventanaAct);
                         }
-                        if (EstadoJugando == "MostrarMensajeEstado")
-                        {
+                        if (EstadoJugando == "MostrarMensajeEstado") {
                             btn_si.Update(MouseAct, MouseAnt, ventanaAct);
                             btn_no.Update(MouseAct, MouseAnt, ventanaAct);
-                            if (btn_si.isClicked == true && ColocarHotel == false)
-                            {
+                            if (btn_si.isClicked == true && ColocarHotel == false) {
                                 btn_si.isClicked = false;
                                 Equipo[EstadoActualEquipo].Fondo -= Convert.ToInt32(cJugador[EstadoActualEquipo].NombreEstadoRe[cJugador[EstadoActualEquipo].NumCaido - 1, 1]);
                                 cJugador[EstadoActualEquipo].MostrarMensaje = false;
@@ -557,9 +496,7 @@ namespace Turista
                                 MuetraMensajeComprEStado = false;
                                 ColocarHotel = true;
                                 EstadoJugando = "Normal";
-                            }
-                            if (btn_no.isClicked == true)
-                            {
+                            } if (btn_no.isClicked == true) {
                                 btn_no.isClicked = false;
                                 cJugador[EstadoActualEquipo].MostrarMensaje = false;
                                 MuetraMensajeComprEStado = false;
@@ -568,13 +505,11 @@ namespace Turista
                                 EstadoJugando = "Normal";
                             }
                         }
-                        if (EstadoJugando == "MensajeColocarHotel")
-                        {
+                        if (EstadoJugando == "MensajeColocarHotel") {
                             btn_si.Update(MouseAct, MouseAnt, ventanaAct);
                             btn_no.Update(MouseAct, MouseAnt, ventanaAct);
 
-                            if (btn_si.isClicked == true)
-                            {
+                            if (btn_si.isClicked == true) {
                                 btn_si.isClicked = false;
                                 Equipo[EstadoActualEquipo].Fondo -= 100;
                                 cHotel[IndiceHotel].MostrarHotel = true;
@@ -593,78 +528,52 @@ namespace Turista
                                 ColocarHotel = false;
                             }
                         }
-                        if (activa != false)
-                        {
+                        if (activa != false) {
                             VerificaRadioButon(gameTime);
-                            foreach (Jugador jugador in cJugador)
-                            {
+                            foreach (Jugador jugador in cJugador) {
                                 jugador.Update(gameTime);
                             }
-                            //if (cJugador[EstadoActualEquipo].MensajePorPasarMexico == true)
-                            //{
-                            //    cJugador[EstadoActualEquipo].MensajePorPasarMexico = false;
-                            //    avisos("       Bonifición $200 al pasar Mexico", "Equipo : " + Equipo[EstadoActualEquipo].nombreequipo + "Fondo Total: " + Equipo[EstadoActualEquipo].Fondo, "", Color.Red, "Pasar_por_Mexico");
-                            //}
-                            if (cJugador[EstadoActualEquipo].MostrarMensaje == true)
-                            {
+                            if (cJugador[EstadoActualEquipo].MostrarMensaje == true) {
                                 MuetraMensajeComprEStado = true;
                             }
-                            if (cJugador[EstadoActualEquipo].MostrarMensajePregunta == true)
-                            {
+                            if (cJugador[EstadoActualEquipo].MostrarMensajePregunta == true) {
                                 EstadoJugando = "MuestraPregunta";
-                                if (modoestado != "aviso")
-                                {
+                                if (modoestado != "aviso") {
                                     Cronometro += gameTime.ElapsedGameTime.TotalSeconds;
                                     guimanager.Update(gameTime);
                                 }
                                 vecesmuestra++;
-                                if (vecesmuestra == 1)
-                                {
+                                if (vecesmuestra == 1) {
                                     MuestraPregunta();
                                 }
                                 btn_Contestar.Update(MouseAct, MouseAnt, ventanaAct);
                                 btnPreguntarEquipo.Update(MouseAct, MouseAnt, ventanaAct);
                                 btn_penlizar.Update(MouseAct, MouseAnt, ventanaAct);
                                 guimanager.Update(gameTime);
-                                if (modojugador == "solo")
-                                {
-                                    if (TiempoMaximo - Cronometro < 1)
-                                    {
+                                if (modojugador == "solo") {
+                                    if (TiempoMaximo - Cronometro < 1) {
                                         veMuestra++;
-                                        if (veMuestra == 1)
-                                        {
+                                        if (veMuestra == 1) {
                                             avisos("                   ¡Tiempo Agotado! ", "        Equipo:  " + Equipo[EstadoActualEquipo].nombreequipo, "QuitarMensaje", Color.Red, "Tiempo_agotado_solo");
                                         }
                                     }
-                                }
-                                else
-                                {
-                                    if (modojugador == "equipo")
-                                    {
-                                        if (TiempoMaximoEquipo - Cronometro < 1)
-                                        {
+                                } else {
+                                    if (modojugador == "equipo") {
+                                        if (TiempoMaximoEquipo - Cronometro < 1) {
                                             veMuestra++;
-                                            if (veMuestra == 1)
-                                            {
+                                            if (veMuestra == 1) {
                                                 avisos("               ¡Tiempo Agotado!", "        Equipo:  " + Equipo[EstadoActualEquipo].nombreequipo, "QuitarMensaje", Color.Red, "Tiempo_agotado_equipo");
                                             }
                                         }
                                     }
                                 }
-
                             }
-                            if (cJugador[EstadoActualEquipo].CaidoEsquina == true && cJugador[EstadoActualEquipo].MensajePagar == true)
-                            {
-
+                            if (cJugador[EstadoActualEquipo].CaidoEsquina == true && cJugador[EstadoActualEquipo].MensajePagar == true) {
                                 cJugador[EstadoActualEquipo].MensajePagar = false;
                                 avisos("      Cubrir couta de $50 al Equipo: " + Equipo[EstadoActualEquipo].nombreequipo, "Fondo Total Equipo:  " + Equipo[EstadoActualEquipo].Fondo, "", Color.Red, "pagar_al_banco");
-
                                 cJugador[EstadoActualEquipo].CaidoEsquina = false;
-                            }
-                            else
-                            {
-                                if (cJugador[EstadoActualEquipo].CaidoEsquina == true)
-                                {
+                            } else {
+                                if (cJugador[EstadoActualEquipo].CaidoEsquina == true {
                                     cJugador[EstadoActualEquipo].CaidoEsquina = false;
                                     EstadoActualEquipo = SiguienteEquipo(EstadoActualEquipo);
                                     SiguienteEquipoActual();
@@ -684,20 +593,16 @@ namespace Turista
                                 avisos("                     ¡Modo Equipo !", "", "", Color.Red, "modo_equipo");
                                 btnPreguntarEquipo.isClicked = false;
                             }
-                            if (btn_penlizar.isClicked == true)
-                            {
+                            if (btn_penlizar.isClicked == true) {
                                 btn_penlizar.isClicked = false;
-                                if (modojugador == "solo")
-                                {
+                                if (modojugador == "solo") {
                                     int val = ((Int32.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[cJugador[EstadoActualEquipo].NumCaido - 1, 1]) * 25) / 100);
                                     Equipo[EstadoActualEquipo].Fondo -= val * 2;
                                     int x = Int32.Parse(EstadosVendidos[cJugador[EstadoActualEquipo].NumCaido - 1, 0]);
                                     Equipo[x].Fondo += val * 2;
                                     Salir();
-                                }
-                                else {
-                                    if (modojugador == "equipo")
-                                    {
+                                } else {
+                                    if (modojugador == "equipo") {
                                         int val = ((Int32.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[cJugador[EstadoActualEquipo].NumCaido - 1, 1]) * 25) / 100);
                                         Equipo[EstadoActualEquipo].Fondo -= val * 2;
                                         int x = Int32.Parse(EstadosVendidos[cJugador[EstadoActualEquipo].NumCaido - 1, 0]);
@@ -708,53 +613,44 @@ namespace Turista
                                     }
                                 }
                             }
-                            if (btnequipo == "Dandoclickbtnequipo")
-                            {
+                            if (btnequipo == "Dandoclickbtnequipo") {
                                 btnequipo = "";
                                 avisos("                     ¡En Equipo!", "", "", Color.Red, "click");
                             }
-                            if (modoestado == "aviso")
-                            {
+                            if (modoestado == "aviso") {
                                 cronometroAviso += gameTime.ElapsedGameTime.TotalSeconds;
                                 cronometroParpadeo += gameTime.ElapsedGameTime.TotalSeconds;
-                                if (cronometroAviso > 4)
-                                {
+                                if (cronometroAviso > 4) {
                                     cronometroAviso = 0;
-                                    if (ModoAviso == "Correcto_ModoSolo")
-                                    {
+                                    if (ModoAviso == "Correcto_ModoSolo") {
                                         int val = ((Int32.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[cJugador[EstadoActualEquipo].NumCaido - 1, 1]) * 25) / 100);
                                         Equipo[EstadoActualEquipo].Fondo -= (val * 50) / 100;
                                         int x = Int32.Parse(EstadosVendidos[cJugador[EstadoActualEquipo].NumCaido - 1, 0]);
-                                        if (ColacadosHoteles[cJugador[EstadoActualEquipo].NumCaido - 1] == "ColocadoHotel")
-                                        {
+                                        if (ColacadosHoteles[cJugador[EstadoActualEquipo].NumCaido - 1] == "ColocadoHotel") {
                                             Equipo[EstadoActualEquipo].Fondo -= (PrecRentaHotel * 50) / 100;
                                             Equipo[x].Fondo += (PrecRentaHotel * 50) / 100;
                                         }
                                         Equipo[x].Fondo += (val * 50) / 100;
                                         Salir();
                                     }
-                                    if (ModoAviso == "Incorrecto_ModoSolo")
-                                    {
+                                    if (ModoAviso == "Incorrecto_ModoSolo") {
                                         Cronometro = 0;
                                         int val = ((Int32.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[cJugador[EstadoActualEquipo].NumCaido - 1, 1]) * 25) / 100);
                                         Equipo[EstadoActualEquipo].Fondo -= val;
                                         int x = Int32.Parse(EstadosVendidos[cJugador[EstadoActualEquipo].NumCaido - 1, 0]);
-                                        if (ColacadosHoteles[cJugador[EstadoActualEquipo].NumCaido - 1] == "ColocadoHotel")
-                                        {
+                                        if (ColacadosHoteles[cJugador[EstadoActualEquipo].NumCaido - 1] == "ColocadoHotel") {
                                             Equipo[EstadoActualEquipo].Fondo -= PrecRentaHotel;
                                             Equipo[x].Fondo += PrecRentaHotel;
                                         }
                                         Equipo[x].Fondo += val;
                                         Salir();
                                     }
-                                    if (ModoAviso == "Correcto_ModoEquipo")
-                                    {
+                                    if (ModoAviso == "Correcto_ModoEquipo") {
                                         Cronometro = 0;
                                         int val = ((Int32.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[cJugador[EstadoActualEquipo].NumCaido - 1, 1]) * 25) / 100);
                                         Equipo[EstadoActualEquipo].Fondo -= (val * 75) / 100;
                                         int x = Int32.Parse(EstadosVendidos[cJugador[EstadoActualEquipo].NumCaido - 1, 0]);
-                                        if (ColacadosHoteles[cJugador[EstadoActualEquipo].NumCaido - 1] == "ColocadoHotel")
-                                        {
+                                        if (ColacadosHoteles[cJugador[EstadoActualEquipo].NumCaido - 1] == "ColocadoHotel") {
                                             Equipo[EstadoActualEquipo].Fondo -= (PrecRentaHotel * 75) / 100;
                                             Equipo[x].Fondo += (PrecRentaHotel * 75) / 100;
                                         }
@@ -763,14 +659,12 @@ namespace Turista
                                         Salir();
                                         modojugador = "solo";
                                     }
-                                    if (ModoAviso == "Incorrecto_ModoEquipo")
-                                    {
+                                    if (ModoAviso == "Incorrecto_ModoEquipo") {
                                         Cronometro = 0;
                                         int val = ((Int32.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[cJugador[EstadoActualEquipo].NumCaido - 1, 1]) * 25) / 100);
                                         Equipo[EstadoActualEquipo].Fondo -= val;
                                         int x = Int32.Parse(EstadosVendidos[cJugador[EstadoActualEquipo].NumCaido - 1, 0]);
-                                        if (ColacadosHoteles[cJugador[EstadoActualEquipo].NumCaido - 1] == "ColocadoHotel")
-                                        {
+                                        if (ColacadosHoteles[cJugador[EstadoActualEquipo].NumCaido - 1] == "ColocadoHotel") {
                                             Equipo[EstadoActualEquipo].Fondo -= PrecRentaHotel;
                                             Equipo[x].Fondo += PrecRentaHotel;
                                         }
@@ -779,20 +673,17 @@ namespace Turista
                                         Salir();
                                         modojugador = "solo";
                                     }
-                                    if (ModoAviso == "Tiempo_agotado_solo")
-                                    {
+                                    if (ModoAviso == "Tiempo_agotado_solo") {
                                         modoestado = "quitarmensaje";
                                         btnequipo = "Dandoclickbtnequipo";
                                         veMuestra = 0;
                                     }
-                                    if (ModoAviso == "Tiempo_agotado_equipo")
-                                    {
+                                    if (ModoAviso == "Tiempo_agotado_equipo") {
                                         Cronometro = 0;
                                         int val = ((Int32.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[cJugador[EstadoActualEquipo].NumCaido - 1, 1]) * 25) / 100);
                                         Equipo[EstadoActualEquipo].Fondo -= val + (val * 25 / 100);
                                         int x = Int32.Parse(EstadosVendidos[cJugador[EstadoActualEquipo].NumCaido - 1, 0]);
-                                        if (ColacadosHoteles[cJugador[EstadoActualEquipo].NumCaido - 1] == "ColocadoHotel")
-                                        {
+                                        if (ColacadosHoteles[cJugador[EstadoActualEquipo].NumCaido - 1] == "ColocadoHotel") {
                                             Equipo[EstadoActualEquipo].Fondo -= PrecRentaHotel + (PrecRentaHotel * 25 / 100);
                                             Equipo[x].Fondo += PrecRentaHotel + (PrecRentaHotel * 25 / 100);
                                         }
@@ -802,8 +693,7 @@ namespace Turista
                                         modojugador = "solo";
                                         veMuestra = 0;
                                     }
-                                    if (ModoAviso == "click")
-                                    {
+                                    if (ModoAviso == "click") {
                                         modojugador = "equipo";
                                         modoestado = "quitarmensaje";
                                         cronometrobtnequipo = 0;
@@ -814,8 +704,7 @@ namespace Turista
                                         btn_penlizar.setPosicion(new Vector2(700, 530));
                                         btn_penlizar.setPosicionRectanguloIsOver(new Vector2(700, 530));
                                     }
-                                    if (ModoAviso == "modo_equipo")
-                                    {
+                                    if (ModoAviso == "modo_equipo") {
                                         modoestado = "quitarmensaje";
                                         modojugador = "equipo";
                                         cronometroAviso = 0;
@@ -827,8 +716,7 @@ namespace Turista
                                         cronometrobtnequipo = 0;
                                         Cronometro = 0;
                                     }
-                                    if (ModoAviso == "pagar_al_banco")
-                                    {
+                                    if (ModoAviso == "pagar_al_banco") {
                                         Cronometro = 0;
                                         FondoInicial += 50;
                                         Equipo[EstadoActualEquipo].Fondo -= 50;
@@ -848,69 +736,52 @@ namespace Turista
                                     }
                                 }
                             }
-                            if (btn_Contestar.isClicked == true)
-                            {
-                                if (Respuesta == RespuestaCorrecta)
-                                {
-                                    if (modojugador == "solo")
-                                    {
+                            if (btn_Contestar.isClicked == true) {
+                                if (Respuesta == RespuestaCorrecta) {
+                                    if (modojugador == "solo") {
                                         avisos("  ¡Respuesta Correcta! Descuento 50% ", "  Equipo: " + Equipo[EstadoActualEquipo].nombreequipo + " Fondo Total: " + Equipo[EstadoActualEquipo].Fondo, "QuitarMensaje ", Color.Green, "Correcto_ModoSolo");
                                         btn_Contestar.isClicked = false;
                                         btnPreguntarEquipo.isClicked = false;
                                     }
-                                    if (modojugador == "equipo")
-                                    {
+                                    if (modojugador == "equipo") {
                                         avisos("  ¡Respuesta Correcta! Descuento 25% ", "  Equipo: " + Equipo[EstadoActualEquipo].nombreequipo + " Fondo: " + Equipo[EstadoActualEquipo].Fondo, "QuitarMensaje ", Color.Green, "Correcto_ModoEquipo");
                                         btn_Contestar.isClicked = false;
                                         btnPreguntarEquipo.isClicked = false;
                                     }
-                                }
-                                else
-                                {
-                                    if (modojugador == "solo")
-                                    {
+                                } else {
+                                    if (modojugador == "solo") {
                                         avisos("  ¡Respuesta Incorrecta! Descuento 0%", "  Equipo: " + Equipo[EstadoActualEquipo].nombreequipo + " Fondo: " + Equipo[EstadoActualEquipo].Fondo, "QuitarMensaje ", Color.Red, "Incorrecto_ModoSolo");
                                         btn_Contestar.isClicked = false;
                                         btnPreguntarEquipo.isClicked = false;
                                     }
-                                    if (modojugador == "equipo")
-                                    {
+                                    if (modojugador == "equipo") {
                                         avisos("  ¡Respuesta Incorrecta! Descuento 0%", "  Equipo: " + Equipo[EstadoActualEquipo].nombreequipo + " Fondo: " + Equipo[EstadoActualEquipo].Fondo, "QuitarMensaje ", Color.Red, "Incorrecto_ModoEquipo");
                                         btn_Contestar.isClicked = false;
                                         btnPreguntarEquipo.isClicked = false;
                                     }
                                 }
                             }
-                            if (Keyboard.GetState().IsKeyDown(Keys.Tab))
-                            {
+                            if (Keyboard.GetState().IsKeyDown(Keys.Tab)) {
                                 VerTabla = true;
                             }
                         }
                     }
-                    if (EstadoJugando == "finalizar_Juego")
-                    {
-                        if (MuestraTabla != true)
-                        {
+                    if (EstadoJugando == "finalizar_Juego") {
+                        if (MuestraTabla != true) {
                             Crono += gameTime.ElapsedGameTime.TotalSeconds;
                             CronoAvanza += gameTime.ElapsedGameTime.TotalSeconds;
                             Contador++;
-                            if (Contador == 1)
-                            {
+                            if (Contador == 1) {
                                 int con = 0;
                                 int PosY = 120;
-
-                                for (int x = 0; x < EstadosVendidos.Length / 3; x++)
-                                {
-                                    if (EstadosVendidos[x, 0] != null)
-                                    {
-                                        if (ActualEquipo == Int32.Parse(EstadosVendidos[x, 0]) && cJugador[ActualEquipo].NombreEstadoRe[x, 0] == EstadosVendidos[x, 1])
-                                        {
+                                for (int x = 0; x < EstadosVendidos.Length / 3; x++) {
+                                    if (EstadosVendidos[x, 0] != null) {
+                                        if (ActualEquipo == Int32.Parse(EstadosVendidos[x, 0]) && cJugador[ActualEquipo].NombreEstadoRe[x, 0] == EstadosVendidos[x, 1]) {
                                             con++;
                                         }
                                     }
                                 }
-                                if (con == 0)
-                                {
+                                if (con == 0) {
                                     Equipo[ActualEquipo].EdosComprados = false;
                                 }
                                 CantidadImagenes = con;
@@ -918,12 +789,9 @@ namespace Turista
                                 Nombreestados = new string[con];
                                 precio = new int[con];
                                 int cont = 0;
-                                for (int x = 0; x < EstadosVendidos.Length / 3; x++)
-                                {
-                                    if (EstadosVendidos[x, 0] != null)
-                                    {
-                                        if (ActualEquipo == Int32.Parse(EstadosVendidos[x, 0]) && cJugador[ActualEquipo].NombreEstadoRe[x, 0] == EstadosVendidos[x, 1])
-                                        {
+                                for (int x = 0; x < EstadosVendidos.Length / 3; x++) {
+                                    if (EstadosVendidos[x, 0] != null) {
+                                        if (ActualEquipo == Int32.Parse(EstadosVendidos[x, 0]) && cJugador[ActualEquipo].NombreEstadoRe[x, 0] == EstadosVendidos[x, 1]) {
                                             NomEstados[cont] = cJugador[ActualEquipo].NombreEstadoRe[x, 2];
                                             Nombreestados[cont] = cJugador[ActualEquipo].NombreEstadoRe[x, 0];
                                             precio[cont] = Int32.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[x, 1]);
@@ -932,23 +800,18 @@ namespace Turista
                                     }
                                 }
                                 cEstados = new DibujaEstados[con];
-                                for (int x = 0; x < NomEstados.Length; x++)
-                                {
+                                for (int x = 0; x < NomEstados.Length; x++) {
                                     cEstados[x] = new DibujaEstados(Nombreestados[x], x, PosY, precio[x], fuente, ga.Content.Load<Texture2D>("Img/" + NomEstados[x]));
                                     PosY += 75;
                                 }
                                 btn_cerrar.Update(MouseAct, MouseAnt, ventanaAct);
                             }
-                            if (Crono > 2)
-                            {
-                                if (CronoAvanza > 1)
-                                {
-                                    if (ActualImagen < CantidadImagenes)
-                                    {
+                            if (Crono > 2) {
+                                if (CronoAvanza > 1) {
+                                    if (ActualImagen < CantidadImagenes) {
                                         cEstados[ActualImagen].Mover = true;
                                     }
-                                    if (Equipo[ActualEquipo].EdosComprados == false)
-                                    {
+                                    if (Equipo[ActualEquipo].EdosComprados == false) {
                                         ActualEquipo = siguienteEqui(ActualEquipo);
                                         SiguienteEquipoAct();
                                         Contador = 0;
@@ -957,31 +820,25 @@ namespace Turista
                                     }
                                 }
                             }
-                            foreach (DibujaEstados estados in cEstados)
-                            {
+                            foreach (DibujaEstados estados in cEstados) {
                                 estados.Update(gameTime, ActualImagen);
                             }
-                            if (ActualImagen < CantidadImagenes)
-                            {
-                                if (cEstados[ActualImagen].ActualizarFondo == true)
-                                {
+                            if (ActualImagen < CantidadImagenes) {
+                                if (cEstados[ActualImagen].ActualizarFondo == true) {
                                     contador++;
-                                    if (contador == 1)
-                                    {
+                                    if (contador == 1) {
                                         cEstados[ActualImagen].ActualizarFondo = false;
                                         Equipo[ActualEquipo].Fondo += cEstados[ActualImagen].Fondo / 2;
                                     }
                                 }
-                                if (cEstados[ActualImagen].Quitar == true)
-                                {
+                                if (cEstados[ActualImagen].Quitar == true) {
                                     contador = 0;
                                     cEstados[ActualImagen].Quitar = false;
                                     SiguienteImagen();
                                     CronoAvanza = 0;
                                 }
                             }
-                            if (EsUltimo == true)
-                            {
+                            if (EsUltimo == true) {
                                 ActualEquipo = siguienteEqui(ActualEquipo);
                                 SiguienteEquipoAct();
                                 Contador = 0;
@@ -989,23 +846,18 @@ namespace Turista
                                 ActualImagen = 0;
                                 EsUltimo = false;
                             }
-                            if (UltimoEquipo == true)
-                            {
+                            if (UltimoEquipo == true) {
                                 MuestraTabla = true;
                             }
                         }
-                        if (MuestraTabla == true)
-                        {
+                        if (MuestraTabla == true) {
                             btn_cerrar.Update(MouseAct, MouseAnt, ventanaAct);
                         }
                     }
-                    if (Keyboard.GetState().IsKeyDown(Keys.Escape))
-                    {
-                        if (EstadoJugando == "MuestraPregunta" || EstadoJugando == "finalizar_Juego")
-                        {
+                    if (Keyboard.GetState().IsKeyDown(Keys.Escape)) {
+                        if (EstadoJugando == "MuestraPregunta" || EstadoJugando == "finalizar_Juego") {
                            
-                        }
-                        else {
+                        } else {
                             Pausa = true;
                             sound_pasmouse.Play();
                             EstadoJuegoActual = EstadoJuego.Pausa;
@@ -1013,20 +865,17 @@ namespace Turista
                     }
                     break;
                 case EstadoJuego.Pausa:
-                    if (btn_ReanudarJuego.isClicked == true)
-                    {
+                    if (btn_ReanudarJuego.isClicked == true) {
                         EstadoJuegoActual = EstadoJuego.Jugando;
                         Pausa = false;
                         veMuestra = 0;
                     }
-                    if (btn_Opciones.isClicked == true)
-                    {
+                    if (btn_Opciones.isClicked == true) {
                         Opc_jugando = new OpcionesJugando(ga, Equipo, EstadoActualEquipo);
                         EstadoJuegoActual = EstadoJuego.OpcionesJugando;
                         btn_Opciones.isClicked = false;
                     }
-                    if (btn_Reiniciar.isClicked == true)
-                    {
+                    if (btn_Reiniciar.isClicked == true) {
                         EstadoJuegoActual = EstadoJuego.Jugando;
                         EstadoJugando = "finalizar_Juego";
                         ActualEquipo = 0;
@@ -1071,22 +920,17 @@ namespace Turista
         public bool EsUltimo = false, MuestraTabla = false, UltimoImagen = false;
         public void VerificaRadioButon(GameTime g)
         {
-            if (rb_Respuesta1 != null || rb_Respuesta2 != null || rb_Respuesta3 != null)
-            {
-                if (rb_Respuesta1.Checked)
-                {
+            if (rb_Respuesta1 != null || rb_Respuesta2 != null || rb_Respuesta3 != null) {
+                if (rb_Respuesta1.Checked) {
                     Respuesta = "A";
                 }
-                if (rb_Respuesta2.Checked)
-                {
+                if (rb_Respuesta2.Checked) {
                     Respuesta = "B";
                 }
-                if (rb_Respuesta3.Checked)
-                {
+                if (rb_Respuesta3.Checked) {
                     Respuesta = "C";
                 }
-                if (rb_Respuesta4.Checked)
-                {
+                if (rb_Respuesta4.Checked) {
                     Respuesta = "D";
                 }
             }
@@ -1098,16 +942,14 @@ namespace Turista
         {
             Microsoft.Xna.Framework.Rectangle bgRect;
             bgRect = new Microsoft.Xna.Framework.Rectangle(0, 0, ga.Window.ClientBounds.Width, ga.Window.ClientBounds.Height);
-            if (fondo1 != null)
-            {
+            if (fondo1 != null) {
                 DrawEstados(batch);
                 DrawBank(batch);
                 batch.Draw(td_FondobarraEquipo, new Rectangle(0, 0, ga.Window.ClientBounds.Width, 80), Color.White);
                 batch.Draw(td_FondobarraEquipo, new Rectangle(0, 0, ga.Window.ClientBounds.Width, 80), Color.White);
                 batch.Draw(td_FondobarraEquipo, new Rectangle(0, 0, ga.Window.ClientBounds.Width, 80), Color.White);
                 btn_TirarDado.Draw(batch);
-                if (activa != false)
-                {
+                if (activa != false) {
                     foreach (ColocarHotel hot in cHotel) {
                         hot.Draw(batch);
                     }
@@ -1115,12 +957,10 @@ namespace Turista
                         eq.Draw(batch);
                     }
                     batch.Draw(equipos[EstadoActualEquipo], new Rectangle(380, 250, 100, 200), Color.White);
-                    for (int c = cJugador.Length -1; c >= 0; c--)
-                    {
+                    for (int c = cJugador.Length -1; c >= 0; c--) {
                         cJugador[c].Draw(batch);
                     }
-                    if (MuetraMensajeComprEStado == true)
-                    {
+                    if (MuetraMensajeComprEStado == true) {
                         batch.Draw(td_FondoPausa, new Vector2(450,310), new Rectangle(0,0, 500, 200), Color.White);
                         batch.Draw(td_FondoPausa, new Vector2(450, 310), new Rectangle(0, 0, 500, 200), Color.White);
                         batch.DrawString(fuente, "¿Desea Comprar el Estado?", new Vector2(555, 350), Color.White);
@@ -1128,8 +968,7 @@ namespace Turista
                         btn_no.Draw(batch);
                         EstadoJugando = "MostrarMensajeEstado";   
                     }
-                    if (ColocarHotel == true)
-                    {
+                    if (ColocarHotel == true) {
                         batch.Draw(td_FondoPausa, new Vector2(450, 310), new Rectangle(0, 0, 500, 200), Color.White);
                         batch.Draw(td_FondoPausa, new Vector2(450, 310), new Rectangle(0, 0, 500, 200), Color.White);
                         batch.DrawString(fuente, "¿Desea colocar Hotel en el estado?", new Vector2(515, 350), Color.White);
@@ -1137,74 +976,56 @@ namespace Turista
                         btn_no.Draw(batch);
                         EstadoJugando = "MensajeColocarHotel";
                     }
-                    if (EstadoJugando == "MuestraPregunta")
-                    {
+                    if (EstadoJugando == "MuestraPregunta") {
                         batch.Draw(td_FondoPausa, new Vector2(330, 210), new Rectangle(0, 0, 750, 400), Color.White);
                         batch.Draw(td_FondoPausa, new Vector2(330, 210), new Rectangle(0, 0, 750, 400), Color.White);
-                        if (modojugador == "solo")
-                        {
+                        if (modojugador == "solo") {
                             double tiempo = TiempoMaximo - Cronometro;
                             int cantdigito = 0;
                             string espacio = "";
                             Color colordigito = Color.White;
-                            if (tiempo < 10)
-                            {
+                            if (tiempo < 10) {
                                 cantdigito = 1;
                                 espacio = "0";
-                                if (tiempo < 6)
-                                {
+                                if (tiempo < 6) {
                                     colordigito = Color.Yellow;
                                 }
-                            }
-                            else
-                            {
+                            } else {
                                 cantdigito = 2;
                             }
                             batch.DrawString(FuenteTiempo, "TIEMPO RESTANTE : " + " " + espacio + tiempo.ToString().Substring(0, cantdigito), new Vector2(389, 240), colordigito);
                         }
-                        if (modojugador == "equipo")
-                        {
+                        if (modojugador == "equipo") {
                             double tiempo = TiempoMaximoEquipo - Cronometro;
                             int cantdigito = 0;
                             string espacio = "";
                             Color colordigito = Color.White;
-                            if (tiempo < 10)
-                            {
+                            if (tiempo < 10) {
                                 cantdigito = 1;
                                 espacio = "0";
-                                if (tiempo < 6)
-                                {
+                                if (tiempo < 6) {
                                     colordigito = Color.Yellow;
                                 }
-                            }
-                            else
-                            {
+                            } else {
                                 cantdigito = 2;
                             }
                             batch.DrawString(FuenteTiempo, "TIEMPO RESTANTE : " + "  " + espacio + tiempo.ToString().Substring(0, cantdigito), new Vector2(389, 240), colordigito);
                         }
                         batch.DrawString(fuente, parseText(StringPregunta), new Vector2(350, 340), Color.White);
                         guimanager.Draw(batch);
-                        if (modojugador == "solo")
-                        {
+                        if (modojugador == "solo") {
                             btnPreguntarEquipo.Draw(batch);
-                        }
-                        else { }
+                        } else { }
                         btn_Contestar.Draw(batch);
                         btn_penlizar.Draw(batch);
                        
                     }
-                    if (modoestado == "aviso")
-                    {
-                        if (cronometroParpadeo > tiempoParpadeo)
-                        {
+                    if (modoestado == "aviso") {
+                        if (cronometroParpadeo > tiempoParpadeo) {
                             cronometroParpadeo = 0;
-                            if (colortemp != Color.White)
-                            {
+                            if (colortemp != Color.White) {
                                 colortemp = Color.White;
-                            }
-                            else
-                            {
+                            } else {
                                 colortemp = coloraviso;
                             }
                         }
@@ -1216,52 +1037,40 @@ namespace Turista
                     }
                 }
                 Vector3 mod = Vector3.Zero;
-                foreach (ModelMesh mesh in ModeloDado.Meshes)
-                {
-                    foreach (BasicEffect effect in mesh.Effects)
-                    {
+                foreach (ModelMesh mesh in ModeloDado.Meshes) {
+                    foreach (BasicEffect effect in mesh.Effects) {
                         effect.EnableDefaultLighting();
-                        if (TiempoMover <= 365 && tirardado == true)
-                        {
+                        if (TiempoMover <= 365 && tirardado == true) {
                             //effect.World = Matrix.CreateFromYawPitchRoll(angle, angle, angle);
-                            if (TiempoMover < 203)
-                            {
-                                if (TiempoMover == 119 && NumCaidoDado == 2)
-                                {
+                            if (TiempoMover < 203) {
+                                if (TiempoMover == 119 && NumCaidoDado == 2) {
                                     tirardado = false;
                                     TiempoMover = 0;
                                     AvanzarEquipo = true;
                                 }
-                                if (TiempoMover == 158 && NumCaidoDado == 1)
-                                {
+                                if (TiempoMover == 158 && NumCaidoDado == 1) {
                                     TiempoMover = 0;
                                     tirardado = false;
                                     AvanzarEquipo = true;
                                 }
-                                if (TiempoMover == 198 && NumCaidoDado == 4)
-                                {
+                                if (TiempoMover == 198 && NumCaidoDado == 4) {
                                     tirardado = false;
                                     TiempoMover = 0;
                                     AvanzarEquipo = true;
                                 }
                                 effect.World = Matrix.CreateRotationX(angle);
-                            }
-                            else
-                            {
-                                if (TiempoMover == 236 && NumCaidoDado == 5)
-                                {
+                            } else {
+                                if (TiempoMover == 236 && NumCaidoDado == 5) {
                                     tirardado = false;
                                     TiempoMover = 0;
                                     AvanzarEquipo = true;
                                 }
-                                if (TiempoMover == 276 && NumCaidoDado == 6)
-                                {
+                                if (TiempoMover == 276 && NumCaidoDado == 6) {
                                     tirardado = false;
                                     TiempoMover = 0;
                                     AvanzarEquipo = true;
                                 }
-                                if (TiempoMover == 354 && NumCaidoDado == 3)
-                                {
+                                if (TiempoMover == 354 && NumCaidoDado == 3) {
                                     tirardado = false;
                                     TiempoMover = 0;
                                     AvanzarEquipo = true;
@@ -1274,10 +1083,8 @@ namespace Turista
                     }
                     mesh.Draw();
                 }
-                if (EstadoJugando == "finalizar_Juego")
-                {
-                    if (MuestraTabla == false)
-                    {
+                if (EstadoJugando == "finalizar_Juego") {
+                    if (MuestraTabla == false) {
                         batch.Draw(td_FondoPausa, new Rectangle(0, 0, ga.Window.ClientBounds.Width, ga.Window.ClientBounds.Height), Color.White);
                         batch.Draw(td_FondoPausa, new Rectangle(0, 0, ga.Window.ClientBounds.Width, ga.Window.ClientBounds.Height), Color.White);
                         batch.DrawString(fuente, "Estados Comprados", new Vector2(900, 60), Color.Orange);
@@ -1287,16 +1094,12 @@ namespace Turista
                         batch.Draw(banco, new Vector2(250, 270), Microsoft.Xna.Framework.Color.White);
                         batch.Draw(equipos[ActualEquipo], new Rectangle(680, 300, 90, 150), Color.White);
                         batch.DrawString(fuente, "Fondo Actual : $" + Equipo[ActualEquipo].Fondo, new Vector2(650, 480), Color.White);
-                        if (cEstados != null)
-                        {
-                            foreach (DibujaEstados eq in cEstados)
-                            {
+                        if (cEstados != null) {
+                            foreach (DibujaEstados eq in cEstados) {
                                 eq.Draw(batch);
                             }
                         }
-                    }
-                    else
-                    {
+                    } else {
                         ContadorPagaHoteles++;
                         batch.Draw(td_FondoPausa, new Rectangle(0, 0, ga.Window.ClientBounds.Width, ga.Window.ClientBounds.Height), Color.White);
                         batch.Draw(td_FondoPausa, new Rectangle(0, 0, ga.Window.ClientBounds.Width, ga.Window.ClientBounds.Height), Color.White);
@@ -1304,8 +1107,7 @@ namespace Turista
                         btn_cerrar.Draw(batch);
                         equiposganadores = ListaGanadores();
                         equiposperdedores = ListaPerdedores();
-                        if (ContadorPagaHoteles == 1)
-                        {
+                        if (ContadorPagaHoteles == 1) {
                             BancoCompraHotelDeLosEquipos();
                         }
 
@@ -1315,8 +1117,7 @@ namespace Turista
                         batch.DrawString(fuente, "Fondo", new Vector2(820, PosY), Color.White);
                         batch.DrawString(fuente, "Vueltas", new Vector2(950, PosY), Color.White);
                         PosY += 40;
-                        for (int x = 0; x < equiposganadores.Length; x++)
-                        {
+                        for (int x = 0; x < equiposganadores.Length; x++) {
                             batch.Draw(td_barra, new Rectangle(350, PosY, 680, 40), Color.White);
                             batch.DrawString(fuenteaviso1, "1", new Vector2(370, PosY + 4), Color.Orange);
                             batch.DrawString(fuenteaviso1, "" + Equipo[Int32.Parse(equiposganadores[x])].nombreequipo, new Vector2(480, PosY + 4), Color.Orange);
@@ -1324,10 +1125,8 @@ namespace Turista
                             batch.DrawString(fuenteaviso1, "" + Equipo[Int32.Parse(equiposganadores[x])].NumeroVueltas, new Vector2(950, PosY + 4), Color.Orange);
                             PosY += 50;
                         }
-                        if (equiposperdedores.Length > 0)
-                        {
-                            for (int x = 0; x < equiposperdedores.Length; x++)
-                            {
+                        if (equiposperdedores.Length > 0) {
+                            for (int x = 0; x < equiposperdedores.Length; x++) {
                                 batch.Draw(td_barra, new Rectangle(350, PosY, 680, 40), Color.White);
                                 batch.DrawString(fuenteaviso1, "" + (x + 2), new Vector2(370, PosY + 4), Color.Orange);
                                 batch.DrawString(fuenteaviso1, "" + Equipo[Int32.Parse(equiposperdedores[x])].nombreequipo, new Vector2(480, PosY + 4), Color.Orange);
@@ -1338,8 +1137,7 @@ namespace Turista
                         }
                     }
                 }
-                if (VerTabla == true)
-                {
+                if (VerTabla == true) {
                     VerTabla = false;
                     batch.Draw(td_FondoPausa, new Rectangle(0, 80, ga.Window.ClientBounds.Width, ga.Window.ClientBounds.Height), Color.White);
                     batch.Draw(td_FondoPausa, new Rectangle(0, 80, ga.Window.ClientBounds.Width, ga.Window.ClientBounds.Height), Color.White);
@@ -1352,8 +1150,7 @@ namespace Turista
                     batch.DrawString(fuente, "Fondo", new Vector2(820, PosY), Color.White);
                     batch.DrawString(fuente, "Vueltas", new Vector2(950, PosY), Color.White);
                     PosY += 40;
-                    for (int x = 0; x < equiposganadores.Length; x++)
-                    {
+                    for (int x = 0; x < equiposganadores.Length; x++) {
                         batch.Draw(td_barra, new Rectangle(350, PosY, 680, 40), Color.White);
                         batch.DrawString(fuenteaviso1, "1", new Vector2(370, PosY + 4), Color.Orange);
                         batch.DrawString(fuenteaviso1, "" + Equipo[Int32.Parse(equiposganadores[x])].nombreequipo, new Vector2(480, PosY), Color.Orange);
@@ -1361,10 +1158,8 @@ namespace Turista
                         batch.DrawString(fuenteaviso1, "" + Equipo[Int32.Parse(equiposganadores[x])].NumeroVueltas, new Vector2(950, PosY), Color.Orange);
                         PosY += 50;
                     }
-                    if (equiposperdedores.Length > 0)
-                    {
-                        for (int x = 0; x < equiposperdedores.Length; x++)
-                        {
+                    if (equiposperdedores.Length > 0) {
+                        for (int x = 0; x < equiposperdedores.Length; x++) {
                             batch.Draw(td_barra, new Rectangle(350, PosY, 680, 30), Color.White);
                             batch.DrawString(fuenteaviso1, "" + (x + 2), new Vector2(370, PosY + 4), Color.Orange);
                             batch.DrawString(fuenteaviso1, "" + Equipo[Int32.Parse(equiposperdedores[x])].nombreequipo, new Vector2(480, PosY), Color.Orange);
@@ -1374,10 +1169,8 @@ namespace Turista
                         }
                     }
                 }
-
             }
-            switch (EstadoJuegoActual)
-            {
+            switch (EstadoJuegoActual) {
                 case EstadoJuego.Pausa:
                     batch.Draw(td_FondoPausa, rec_pausa, Color.White);
                     batch.Draw(td_FondoPausa, rec_pausa, Color.White);
@@ -1394,8 +1187,7 @@ namespace Turista
         }
         public void DrawBank(SpriteBatch batch)
         {
-            if (banco != null)
-            {
+            if (banco != null) {
                 //batch.DrawString(fuente, "Banco", new Vector2(950, 290), Color.Black);
                 batch.Draw(banco, new Vector2(830, 300), Microsoft.Xna.Framework.Color.White);
                 //batch.DrawString(fuente, "Capital : $" + FondoInicial, new Vector2(900, 500), Color.Black);
@@ -1404,58 +1196,42 @@ namespace Turista
         public void DrawEstados(SpriteBatch batch)
         {
             est = Estados.Count();
-            for (int i = 0; i < 11; i++)
-            {
-                for (int j = 0; j < 13; j++)
-                {
-                    if (Suelo[i, j] == 1)
-                    {
+            for (int i = 0; i < 11; i++) {
+                for (int j = 0; j < 13; j++) {
+                    if (Suelo[i, j] == 1) {
                         est--;
-                        if (est >= 0)
-                        {
+                        if (est >= 0) {
                             pos[est, 0] = Convert.ToInt32(tileDimensions.X * j);
                             pos[est, 1] = Convert.ToInt32(tileDimensions.Y * i);
                             variable = new Var();
                             posImagen = pos;
                             batch.Draw(Estados[est], new Vector2(tileDimensions.X * j, tileDimensions.Y * i), Microsoft.Xna.Framework.Color.White);
                         }
-                    }
-                    else
-                    {
-                        if (Suelo[i, j] == 2)
-                        {
+                    } else {
+                        if (Suelo[i, j] == 2) {
                             batch.Draw(mexico, new Vector2(tileDimensions.X * j, tileDimensions.Y * i), Microsoft.Xna.Framework.Color.White);
                             PosEsquinas1[0, 0] = Convert.ToInt32(tileDimensions.X * j);
                             PosEsquinas1[0, 1] = Convert.ToInt32(tileDimensions.Y * i);
                             variable = new Var();
                             PosEsquina = PosEsquinas1;
-                        }
-                        else
-                        {
-                            if (Suelo[i, j] == 3)
-                            {
+                        } else {
+                            if (Suelo[i, j] == 3) {
                                 batch.Draw(goo, new Vector2(tileDimensions.X * j, tileDimensions.Y * i), Microsoft.Xna.Framework.Color.White);
                                 batch.DrawString(fuente, "superior", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 13), Color.Black);
                                 batch.DrawString(fuente, "Izquierda", new Vector2(tileDimensions.X * j + 8, tileDimensions.Y * i + 35), Color.Black);
                                 PosEsquinas2[0, 0] = Convert.ToInt32(tileDimensions.X * j);
                                 PosEsquinas2[0, 1] = Convert.ToInt32(tileDimensions.Y * i);
                                 PosEsquina1 = PosEsquinas2;
-                            }
-                            else
-                            {
-                                if (Suelo[i, j] == 4)
-                                {
+                            } else {
+                                if (Suelo[i, j] == 4) {
                                     batch.Draw(colmexico, new Vector2(tileDimensions.X * j, tileDimensions.Y * i), Microsoft.Xna.Framework.Color.White);
                                     batch.DrawString(fuente, "Viajar", new Vector2(tileDimensions.X * j + 25, tileDimensions.Y * i + 13), Color.Black);
                                     batch.DrawString(fuente, "Mexico", new Vector2(tileDimensions.X * j + 24, tileDimensions.Y * i + 35), Color.Black);
                                     PosEsquinas3[0, 0] = Convert.ToInt32(tileDimensions.X * j);
                                     PosEsquinas3[0, 1] = Convert.ToInt32(tileDimensions.Y * i);
                                     PosEsquina2 = PosEsquinas3;
-                                }
-                                else
-                                {
-                                    if (Suelo[i, j] == 5)
-                                    {
+                                } else {
+                                    if (Suelo[i, j] == 5) {
                                         batch.Draw(paga, new Vector2(tileDimensions.X * j, tileDimensions.Y * i), Microsoft.Xna.Framework.Color.White);
                                         batch.DrawString(fuente, "Pagar", new Vector2(tileDimensions.X * j + 25, tileDimensions.Y * i + 13), Color.Black);
                                         batch.DrawString(fuente, "Banco", new Vector2(tileDimensions.X * j + 24, tileDimensions.Y * i + 35), Color.Black);
@@ -1467,50 +1243,35 @@ namespace Turista
                             }
                         }
                     }
-                    if (Suelo[i, j] == 6)
-                    {
-                        if (activa == true)
-                        {
-                            if (EstadosVendidos[0, 1] == "Durango" && EstadosVendidos[0, 2] == "Vendido")
-                            {
+                    if (Suelo[i, j] == 6) {
+                        if (activa == true) {
+                            if (EstadosVendidos[0, 1] == "Durango" && EstadosVendidos[0, 2] == "Vendido") {
                                 batch.DrawString(fuete11,"Prop:"+Equipo[int.Parse(EstadosVendidos[0,0])].nombreequipo, new Vector2(tileDimensions.X * j + 2, tileDimensions.Y * i + 130), Color.White);
                                 batch.DrawString(fuete11, "Renta: $" + Double.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[0,1]) * 25 / 100, new Vector2(tileDimensions.X * j + 15, tileDimensions.Y * i + 150), Color.White);
-                            }
-                            else
-                            {
+                            } else {
                                 batch.DrawString(fuete11, "  Durango", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 130), Color.Black);
                                 batch.DrawString(fuete11, "Precio: $" + PreDurango, new Vector2(tileDimensions.X * j + 15, tileDimensions.Y * i + 150), Color.Black);
                             }
-                        }
-                        else
-                        {
+                        } else {
                             batch.DrawString(fuete11, "  Durango", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 130), Color.Black);
                             batch.DrawString(fuete11, "Precio: $" + PreDurango, new Vector2(tileDimensions.X * j + 5, tileDimensions.Y * i + 150), Color.Black);
                         }
                     }
-                    if (Suelo[i, j] == 7)
-                    {
-                        if (activa == true)
-                        {
-                            if (EstadosVendidos[1, 1] == "Colima" && EstadosVendidos[1, 2] == "Vendido")
-                            {
+                    if (Suelo[i, j] == 7) {
+                        if (activa == true) {
+                            if (EstadosVendidos[1, 1] == "Colima" && EstadosVendidos[1, 2] == "Vendido") {
                                 batch.DrawString(fuete11,"Prop:"+Equipo[int.Parse(EstadosVendidos[1,0])].nombreequipo, new Vector2(tileDimensions.X * j +2, tileDimensions.Y * i + 130), Color.White);
                                 batch.DrawString(fuete11, "Renta: $" + Double.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[1, 1]) * 25 / 100, new Vector2(tileDimensions.X * j + 15, tileDimensions.Y * i + 150), Color.White);
-                            }
-                            else
-                            {
+                            } else {
                                 batch.DrawString(fuete11, "  Colima", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 130), Color.Black);
                                 batch.DrawString(fuete11, "Precio: $" + PreColima, new Vector2(tileDimensions.X * j + 15, tileDimensions.Y * i + 150), Color.Black);
                             }
-                        }
-                        else
-                        {
+                        } else {
                             batch.DrawString(fuete11, "  Colima", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 130), Color.Black);
                             batch.DrawString(fuete11, "Precio: $" + PreColima, new Vector2(tileDimensions.X * j + 5, tileDimensions.Y * i + 150), Color.Black);
                         }
                     }
-                    if (Suelo[i, j] == 8)
-                    {
+                    if (Suelo[i, j] == 8) {
                         if (activa == true)
                         {
                             if (EstadosVendidos[2, 1] == "Coahuila" && EstadosVendidos[2, 2] == "Vendido")
@@ -1824,149 +1585,102 @@ namespace Turista
                             batch.DrawString(fuete11, "Precio: $" + PreSinaloa, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                         }
                     }
-                    if (Suelo[i, j] == 23)
-                    {
-                        if (activa == true)
-                        {
-                            if (EstadosVendidos[19, 1] == "Sonora" && EstadosVendidos[19, 2] == "Vendido")
-                            {
+                    if (Suelo[i, j] == 23) {
+                        if (activa == true) {
+                            if (EstadosVendidos[19, 1] == "Sonora" && EstadosVendidos[19, 2] == "Vendido") {
                                 batch.DrawString(fuete11,"Prop:"+Equipo[int.Parse(EstadosVendidos[19,0])].nombreequipo, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.White);
                                 batch.DrawString(fuete11, "Renta: $" + Double.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[19, 1]) * 25 / 100, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.White);
-                            }
-                            else
-                            {
+                            } else {
                                 batch.DrawString(fuete11, "  Sonora", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                                 batch.DrawString(fuete11, "Precio: $" + PreSonora, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                             }
-                        }
-                        else
-                        {
+                        } else {
                             batch.DrawString(fuete11, "  Sonora", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                             batch.DrawString(fuete11, "Precio: $" + PreSonora, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                         }
                     }
-                    if (Suelo[i, j] == 24)
-                    {
-                        if (activa == true)
-                        {
+                    if (Suelo[i, j] == 24) {
+                        if (activa == true) {
                             if (EstadosVendidos[20, 1] == "Tabasco" && EstadosVendidos[20, 2] == "Vendido")
                             {
                                 batch.DrawString(fuete11,"Prop:"+Equipo[int.Parse(EstadosVendidos[20,0])].nombreequipo, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.White);
                                 batch.DrawString(fuete11, "Renta: $" + Double.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[20, 1]) * 25 / 100, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.White);
-                            }
-                            else
-                            {
+                            } else {
                                 batch.DrawString(fuete11, "  Tabasco", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                                 batch.DrawString(fuete11, "Precio: $" + PreTabasco, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                             }
-                        }
-                        else
-                        {
+                        } else {
                             batch.DrawString(fuete11, "  Tabasco", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                             batch.DrawString(fuete11, "Precio: $" + PreTabasco, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                         }
                     }
-                    if (Suelo[i, j] == 25)
-                    {
-                        if (activa == true)
-                        {
-                            if (EstadosVendidos[21, 1] == "Tamaulipas" && EstadosVendidos[21, 2] == "Vendido")
-                            {
+                    if (Suelo[i, j] == 25) {
+                        if (activa == true) {
+                            if (EstadosVendidos[21, 1] == "Tamaulipas" && EstadosVendidos[21, 2] == "Vendido") {
                                 batch.DrawString(fuete11,"Prop:"+Equipo[int.Parse(EstadosVendidos[21,0])].nombreequipo, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.White);
                                 batch.DrawString(fuete11, "Renta: $" + Double.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[21, 1]) * 25 / 100, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.White);
-                            }
-                            else
-                            {
+                            } else {
                                 batch.DrawString(fuete11, "  Tamaulipas", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                                 batch.DrawString(fuete11, "Precio: $" + PreTamaul, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                             }
-                        }
-                        else
-                        {
+                        } else {
                             batch.DrawString(fuete11, "  Tamaulipas", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                             batch.DrawString(fuete11, "Precio: $" + PreTamaul, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                         }
                     }
-                    if (Suelo[i, j] == 26)
-                    {
-                        if (activa == true)
-                        {
-                            if (EstadosVendidos[22, 1] == "Tlaxcala" && EstadosVendidos[22, 2] == "Vendido")
-                            {
+                    if (Suelo[i, j] == 26) {
+                        if (activa == true) {
+                            if (EstadosVendidos[22, 1] == "Tlaxcala" && EstadosVendidos[22, 2] == "Vendido") {
                                 batch.DrawString(fuete11,"Prop:"+Equipo[int.Parse(EstadosVendidos[22,0])].nombreequipo, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.White);
                                 batch.DrawString(fuete11, "Renta: $" + Double.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[22, 1]) * 25 / 100, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.White);
-                            }
-                            else
-                            {
+                            } else {
                                 batch.DrawString(fuete11, "  Tlaxcala", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                                 batch.DrawString(fuete11, "Precio: $" + PreTlaxcala, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                             }
-                        }
-                        else
-                        {
+                        } else {
                             batch.DrawString(fuete11, "  Tlaxcala", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                             batch.DrawString(fuete11, "Precio: $" + PreTlaxcala, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                         }
                     }
-                    if (Suelo[i, j] == 27)
-                    {
-                        if (activa == true)
-                        {
-                            if (EstadosVendidos[23, 1] == "Veracruz" && EstadosVendidos[23, 2] == "Vendido")
-                            {
+                    if (Suelo[i, j] == 27)  {
+                        if (activa == true) {
+                            if (EstadosVendidos[23, 1] == "Veracruz" && EstadosVendidos[23, 2] == "Vendido") {
                                 batch.DrawString(fuete11,"Prop:"+Equipo[int.Parse(EstadosVendidos[23,0])].nombreequipo, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.White);
                                 batch.DrawString(fuete11, "Renta: $" + Double.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[23, 1]) * 25 / 100, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.White);
-                            }
-                            else
-                            {
+                            } else {
                                 batch.DrawString(fuete11, "  Veracruz", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                                 batch.DrawString(fuete11, "Precio: $" + PreVeracruz, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                             }
-                        }
-                        else
-                        {
+                        } else {
                             batch.DrawString(fuete11, "  Veracruz", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                             batch.DrawString(fuete11, "Precio: $" + PreVeracruz, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                         }
                     }
                     if (Suelo[i, j] == 28)
                     {
-                        if (activa == true)
-                        {
-                            if (EstadosVendidos[24, 1] == "Yucatan" && EstadosVendidos[24, 2] == "Vendido")
-                            {
+                        if (activa == true) {
+                            if (EstadosVendidos[24, 1] == "Yucatan" && EstadosVendidos[24, 2] == "Vendido") {
                                 batch.DrawString(fuete11,"Prop:"+Equipo[int.Parse(EstadosVendidos[24,0])].nombreequipo, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.White);
                                 batch.DrawString(fuete11, "Renta: $" + Double.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[24, 1]) * 25 / 100, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.White);
-                            }
-                            else
-                            {
+                            } else {
                                 batch.DrawString(fuete11, "  Yucatan", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                                 batch.DrawString(fuete11, "Precio: $" + PreYucatan, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                             }
-                        }
-                        else
-                        {
+                        } else {
                             batch.DrawString(fuete11, "  Yucatan", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                             batch.DrawString(fuete11, "Precio: $" + PreYucatan, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                         }
                     }
-                    if (Suelo[i, j] == 29)
-                    {
-                        if (activa == true)
-                        {
-                            if (EstadosVendidos[25, 1] == "Zacatecas" && EstadosVendidos[25, 2] == "Vendido")
-                            {
+                    if (Suelo[i, j] == 29) {
+                        if (activa == true) {
+                            if (EstadosVendidos[25, 1] == "Zacatecas" && EstadosVendidos[25, 2] == "Vendido") {
                                 batch.DrawString(fuete11,"Prop:"+Equipo[int.Parse(EstadosVendidos[25,0])].nombreequipo, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.White);
                                 batch.DrawString(fuete11, "Renta: $" + Double.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[25, 1]) * 25 / 100, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.White);
-                            }
-                            else
-                            {
+                            } else {
                                 batch.DrawString(fuete11, "  Zacatecas", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                                 batch.DrawString(fuete11, "Precio: $" + PreZacatecas, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                             }
-                        }
-                        else
-                        {
+                        } else {
                             batch.DrawString(fuete11, "  Zacatecas", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 110), Color.Black);
                             batch.DrawString(fuete11, "Precio: $" + PreZacatecas, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i - 90), Color.Black);
                         }
@@ -2097,44 +1811,30 @@ namespace Turista
                             batch.DrawString(fuete11, "Precio: $" + PreMichoacan, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 30), Color.Black);
                         }
                     }
-                    if (Suelo[i, j] == 36)
-                    {
-                        if (activa == true)
-                        {
-                            if (EstadosVendidos[33, 1] == "Hidalgo" && EstadosVendidos[33, 2] == "Vendido")
-                            {
+                    if (Suelo[i, j] == 36) {
+                        if (activa == true) {
+                            if (EstadosVendidos[33, 1] == "Hidalgo" && EstadosVendidos[33, 2] == "Vendido") {
                                 batch.DrawString(fuete11,"Prop:"+Equipo[int.Parse(EstadosVendidos[33,0])].nombreequipo, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 10), Color.White);
                                 batch.DrawString(fuete11, "Renta: $" + Double.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[33, 1]) * 25 / 100, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 30), Color.White);
-                            }
-                            else
-                            {
+                            } else {
                                 batch.DrawString(fuete11, "  Hidalgo", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 10), Color.Black);
                                 batch.DrawString(fuete11, "Precio: $" + PreHidalgo, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 30), Color.Black);
                             }
-                        }
-                        else
-                        {
+                        } else {
                             batch.DrawString(fuete11, "  Hidalgo", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 10), Color.Black);
                             batch.DrawString(fuete11, "Precio: $" + PreHidalgo, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 30), Color.Black);
                         }
                     }
-                    if (Suelo[i, j] == 37)
-                    {
-                        if (activa == true)
-                        {
-                            if (EstadosVendidos[34, 1] == "Guanajuato" && EstadosVendidos[34, 2] == "Vendido")
-                            {
+                    if (Suelo[i, j] == 37) {
+                        if (activa == true) {
+                            if (EstadosVendidos[34, 1] == "Guanajuato" && EstadosVendidos[34, 2] == "Vendido") {
                                 batch.DrawString(fuete11,"Prop:"+Equipo[int.Parse(EstadosVendidos[34,0])].nombreequipo, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 10), Color.White);
                                 batch.DrawString(fuete11, "Renta: $" + Double.Parse(cJugador[EstadoActualEquipo].NombreEstadoRe[34, 1]) * 25 / 100, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 30), Color.White);
-                            }
-                            else
-                            {
+                            } else {
                                 batch.DrawString(fuete11, "  Guanajuato", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 10), Color.Black);
                                 batch.DrawString(fuete11, "Precio: $" + PreGuanajuato, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 30), Color.Black);
                             }
-                        }
-                        else
-                        {
+                        } else {
                             batch.DrawString(fuete11, "  Guanajuato", new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 10), Color.Black);
                             batch.DrawString(fuete11, "Precio: $" + PreGuanajuato, new Vector2(tileDimensions.X * j + 10, tileDimensions.Y * i + 30), Color.Black);
                         }
@@ -2175,11 +1875,9 @@ namespace Turista
         public int siguienteEqui(int val) {
             int actual = val;
             int v = 0;
-            if (actual <= equipos.Count)
-            {
+            if (actual <= equipos.Count) {
                 v = actual;
-            }
-            else {
+            }  else {
                 UltimoEquipo = true;
             }
             return v;
@@ -2187,49 +1885,36 @@ namespace Turista
         public bool UltimoEquipo =false;
         public void SiguienteEquipoAct()
         {
-            if (ActualEquipo < Equipo.Length - 1)
-            {
+            if (ActualEquipo < Equipo.Length - 1) {
                 ActualEquipo++;
-            }
-            else {
+            } else {
                 UltimoEquipo = true;
             }
-            for (int i = 0; i < Equipo.Length; i++)
-            {
-                if (i == ActualEquipo)
-                {
+            for (int i = 0; i < Equipo.Length; i++) {
+                if (i == ActualEquipo) {
                     Equipo[i].ActualEquipo = true;
-                }
-                else
-                {
+                }  else {
                     Equipo[i].ActualEquipo = false;
                 }
             }
-
         }
         public int SiguienteEquipo(int val)
         {
             int actual = val;
-            if (actual >= equipos.Count)
-            {
+            if (actual >= equipos.Count) {
                 actual = 0;
             }
             return actual;
         }
         public void SiguienteEquipoActual() {
             EstadoActualEquipo++;
-            if (EstadoActualEquipo >= Equipo.Length)
-            {
+            if (EstadoActualEquipo >= Equipo.Length) {
                 EstadoActualEquipo = 0;
             }
-            for (int i = 0; i < Equipo.Length; i++)
-            {
-                if (i == EstadoActualEquipo)
-                {
+            for (int i = 0; i < Equipo.Length; i++) {
+                if (i == EstadoActualEquipo) {
                     Equipo[i].ActualEquipo = true;
-                }
-                else
-                {
+                } else {
                     Equipo[i].ActualEquipo = false;
                 }
             }
@@ -2238,14 +1923,10 @@ namespace Turista
             if (EstadoActualEquipo >= cJugador.Length) {
                 EstadoActualEquipo = 0;
             }
-            for (int i = 0; i < cJugador.Length; i++)
-            {
-                if (i == EstadoActualEquipo)
-                {
+            for (int i = 0; i < cJugador.Length; i++) {
+                if (i == EstadoActualEquipo) {
                     cJugador[i].ActualJugador = true;
-                }
-                else
-                {
+                } else {
                     cJugador[i].ActualJugador = false;
                 }
             }
@@ -2273,32 +1954,25 @@ namespace Turista
         {
             string[] EquiposPerdedores = null;
             int Maximofondo = Convert.ToInt32(Equipo[0].Fondo);
-            for (int x = 0; x < Equipo.Length; x++)
-            {
-                if (Equipo[x].Fondo > Maximofondo)
-                {
+            for (int x = 0; x < Equipo.Length; x++) {
+                if (Equipo[x].Fondo > Maximofondo) {
                     Maximofondo = Convert.ToInt32(Equipo[x].Fondo);
                 }
             }
             //sacar los equipos con menor dinero
             string perdedores = "";
-            for (int x = 0; x < Equipo.Length; x++)
-            {
-                if (Equipo[x].Fondo < Maximofondo)
-                {
+            for (int x = 0; x < Equipo.Length; x++) {
+                if (Equipo[x].Fondo < Maximofondo) {
                     perdedores += x + ",";
                 }
             }
-            if (perdedores != "")
-            {
+            if (perdedores != "") {
                 perdedores = perdedores.Substring(0, perdedores.Length - 1);
                 EquiposPerdedores = perdedores.Split(',');
                 EquiposPerdedores = QuickSort(EquiposPerdedores, 0, EquiposPerdedores.Length - 1);
-            }
-            else {
+            } else {
                 EquiposPerdedores = new string[0];
-            }
-
+            } 
             return EquiposPerdedores;
         }
         public string[] QuickSort(string[] ListaPerdedores, int primero, int ultimo)
@@ -2309,12 +1983,10 @@ namespace Turista
             pivote = Convert.ToDouble(Equipo[Int32.Parse(ListaPerdedores[central])].Fondo);
             i = primero;
             j = ultimo;
-            do
-            {
+            do {
                 while (Convert.ToDouble(Equipo[Int32.Parse(ListaPerdedores[i])].Fondo) > pivote) i++;
                 while (Convert.ToDouble(Equipo[Int32.Parse(ListaPerdedores[j])].Fondo) < pivote) j--;
-                if (i <= j)
-                {
+                if (i <= j) {
                     int temp;
                     temp = Int32.Parse(ListaPerdedores[i]);
                     ListaPerdedores[i] = ListaPerdedores[j];
@@ -2324,12 +1996,10 @@ namespace Turista
                 }
             } while (i <= j);
 
-            if (primero < j)
-            {
+            if (primero < j) {
                 QuickSort(ListaPerdedores, primero, j);
             }
-            if (i < ultimo)
-            {
+            if (i < ultimo) {
                 QuickSort(ListaPerdedores, i, ultimo);
             }
             return ListaPerdedores;
@@ -2337,12 +2007,9 @@ namespace Turista
         public void BancoCompraHotelDeLosEquipos()
         {
             int estados = EstadosVendidos.Length / 3;
-            for (int x = 0; x < estados; x++)
-            {
-                for (int y = 0; y < Equipo.Length; y++)
-                {
-                    if (Equipo[y].Indice == EstadosVendidos[x, 0] && ColacadosHoteles[x] == "ColocadoHotel")
-                    {
+            for (int x = 0; x < estados; x++) {
+                for (int y = 0; y < Equipo.Length; y++) {
+                    if (Equipo[y].Indice == EstadosVendidos[x, 0] && ColacadosHoteles[x] == "ColocadoHotel") {
                         Equipo[y].Fondo += 100 / 2;
                     }
                 }
@@ -2354,17 +2021,13 @@ namespace Turista
             String returnString = String.Empty;
             String[] wordArray = text.Split(' ');
 
-            foreach (String word in wordArray)
-            {
-                if (fuente.MeasureString(line + word).Length() > td_FondoPausa.Width -20)
-                {
+            foreach (String word in wordArray) {
+                if (fuente.MeasureString(line + word).Length() > td_FondoPausa.Width -20) {
                     returnString = returnString + line + '\n';
                     line = String.Empty;
                 }
-
                 line = line + word + ' ';
             }
-
             return returnString + line;
         }
         public void Salir() {
