@@ -56,65 +56,35 @@ namespace Turista
         }
         public void Update(GameTime time)
         {
-            if (avanza == true)
-            {
-                if (NumCaido != 18)
-                {
-                    //if (PosicionX < PosicionAsignados[NumCaido - 1, 0] && PosicionY == PosicionAsignados[NumCaido - 1, 1])
-                    //{
-                    //    PosicionX += 35;
-                    //}
-                    //if (PosicionX <= PosicionAsignados[NumCaido - 1, 0] && PosicionY > PosicionAsignados[NumCaido - 1, 1])
-                    //{
-                    //    PosicionY -= 20;
-                    //}
-                    ////if (PosicionX < PosicionAsignados[NumCaido - 1, 0] && PosicionY > PosicionAsignados[NumCaido - 1, 1])
-                    ////{
-                    ////    PosicionX += 35;
-                    ////    PosicionY -= 20;
-                    ////}
-                    ////if (PosicionX > PosicionAsignados[NumCaido - 1, 0] && PosicionY == PosicionAsignados[NumCaido - 1, 1])
-                    ////{
-                    ////    PosicionX -= 35;
-                    ////}
-                    if (PosicionX < (PosicionAsignados[NumCaido - 1, 0]))
-                    {
+            if (avanza == true) {
+                if (NumCaido != 18) {
+                    if (PosicionX < (PosicionAsignados[NumCaido - 1, 0])) {
                         PosicionX += 36;
                     }
-                    if (PosicionX > PosicionAsignados[NumCaido - 1, 0])
-                    {
+                    if (PosicionX > PosicionAsignados[NumCaido - 1, 0]) {
                         PosicionX -= 35;
                     }
-                    if (PosicionY < PosicionAsignados[NumCaido - 1, 1])
-                    {
+                    if (PosicionY < PosicionAsignados[NumCaido - 1, 1]) {
                         PosicionY += 10;
                     }
-                    if (PosicionY > PosicionAsignados[NumCaido - 1, 1])
-                    {
+                    if (PosicionY > PosicionAsignados[NumCaido - 1, 1]) {
                         PosicionY -= 10;
                     }
                 }
             }
-            if (IrEsquina == true)
-            {
-                if (PosicionX >= PosicionAsignados[27, 0] && PosicionY >= PosicionAsignados[27, 1])
-                {
+            if (IrEsquina == true) {
+                if (PosicionX >= PosicionAsignados[27, 0] && PosicionY >= PosicionAsignados[27, 1]) {
                     PosicionX -= 36;
                     PosicionY -= 25;
-                }
-                else
-                {
+                } else {
                     IrEsquina =false;
                 }
             }
-            if (ViajarMexico == true)
-            {
-                if (PosicionXavion > PosicionXOriginal && PosicionYavion < PosicionYOriginal)
-                {
+            if (ViajarMexico == true) {
+                if (PosicionXavion > PosicionXOriginal && PosicionYavion < PosicionYOriginal) {
                     PosicionXavion -= 35;
                     PosicionYavion += 17;
-                }
-                else {
+                } else {
                     ViajarMexico = false;
                     PosicionXavion = 1243;
                     PosicionYavion = 130;
@@ -124,17 +94,11 @@ namespace Turista
         }
         public void Draw(SpriteBatch batch)
         {
-            if (Modojuagando == "PosicionInicio")
-            {
+            if (Modojuagando == "PosicionInicio") {
                 batch.Draw(Equipos, new Rectangle(PosicionX, PosicionY, 40, 70), Color.White);
             }
-            if (MostrarAvion == true)
-            {
+            if (MostrarAvion == true) {
                 batch.Draw(Avion, new Rectangle(PosicionXavion, PosicionYavion, 100, 80), Color.White);
-            }
-            else
-            {
-
             }
         }
         int valorMax = 35,val;
@@ -144,18 +108,12 @@ namespace Turista
         public void AvanzaJugador(int valor)
         {
             VecesLanzado++;
-            if (VecesLanzado == 1)
-            {
+            if (VecesLanzado == 1) {
                 NumCaido = valor;
-            }
-            else
-            {
-                if (NumCaido + valor <= 35)
-                {
+            } else {
+                if (NumCaido + valor <= 35) {
                     NumCaido += valor;
-                }
-                else
-                {
+                } else {
                     val = valorMax - NumCaido;
                     valor = valor - val;
                     NumCaido = valor;
@@ -163,16 +121,11 @@ namespace Turista
                     NumVueltas++;
                 }
             }
-            for (int f = 0; f < 11; f++)
-            {
-                for (int c = 0; c < 13; c++)
-                {
-                    if (Tablero[f, c] == NumCaido)
-                    {
-                        if (NumCaido == 10 || NumCaido == 18)
-                        {
-                            if (NumCaido == 10)
-                            {
+            for (int f = 0; f < 11; f++) {
+                for (int c = 0; c < 13; c++) {
+                    if (Tablero[f, c] == NumCaido) {
+                        if (NumCaido == 10 || NumCaido == 18) {
+                            if (NumCaido == 10) {
                                 PosicionX = PosicionAsignados[NumCaido -1, 0];
                                 PosicionY = PosicionAsignados[NumCaido -1, 1];
                                 NumCaido = 28;
@@ -180,8 +133,7 @@ namespace Turista
                                 IrEsquina = true;
                                 MensajePagar = true;
                             }
-                            if (NumCaido == 18)
-                            {
+                            if (NumCaido == 18) {
                                 PosicionX = PosicionXOriginal;
                                 PosicionY = PosicionYOriginal;
                                 VecesLanzado = 0;
@@ -189,37 +141,24 @@ namespace Turista
                                 ViajarMexico = true;
                                 MostrarAvion = true;
                             }
-                        }
-                        else
-                        {
-                            if (EstadosVendidos[NumCaido - 1, 2] != "Vendido")
-                            {
-                                if (NumCaido == 28)
-                                {
+                        } else {
+                            if (EstadosVendidos[NumCaido - 1, 2] != "Vendido") {
+                                if (NumCaido == 28) {
                                     MostrarMensaje = false;
                                     MensajePagar = true;
-                                }
-                                else
-                                {
+                                } else {
                                     MostrarMensaje = true;
                                 }
-                            }
-                            else
-                            {
-                                if (EstadosVendidos[NumCaido - 1, 2] == "Vendido" && int.Parse(EstadosVendidos[NumCaido - 1, 0]) == jugadorActual)
-                                {
+                            } else {
+                                if (EstadosVendidos[NumCaido - 1, 2] == "Vendido" && int.Parse(EstadosVendidos[NumCaido - 1, 0]) == jugadorActual) {
                                     MostrarMensaje = false;
                                     MostrarMensajePregunta = false;
                                     Estado_suyo = true;
-                                }
-                                else
-                                {
+                                } else {
                                     MostrarMensaje = false;
                                     MostrarMensajePregunta = true;
                                 }
                             }
-                            //PosicionX = PosicionAsignados[NumCaido - 1, 0];
-                            //PosicionY = PosicionAsignados[NumCaido - 1, 1];
                             avanza = true;
                         }
                     }
