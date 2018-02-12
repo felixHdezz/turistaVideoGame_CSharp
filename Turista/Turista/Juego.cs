@@ -1188,9 +1188,7 @@ namespace Turista
         public void DrawBank(SpriteBatch batch)
         {
             if (banco != null) {
-                //batch.DrawString(fuente, "Banco", new Vector2(950, 290), Color.Black);
                 batch.Draw(banco, new Vector2(830, 300), Microsoft.Xna.Framework.Color.White);
-                //batch.DrawString(fuente, "Capital : $" + FondoInicial, new Vector2(900, 500), Color.Black);
             }
         }
         public void DrawEstados(SpriteBatch batch)
