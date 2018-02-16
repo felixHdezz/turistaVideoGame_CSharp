@@ -20,8 +20,7 @@ namespace Turista
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        enum EstadoJuego
-        {
+        enum EstadoJuego {
             MenuPrincipal,
             NuevoJuego,
             Jugando,
@@ -92,8 +91,7 @@ namespace Turista
             td_texto = Content.Load<Texture2D>("Img/Texto");
             td_titulo = Content.Load<Texture2D>("Img/Titulo");
             td_FondoJuego = Content.Load<Texture2D>("Img/img_pausa");
-            try
-            {
+            try {
                 sound_PasMouse = Content.Load<SoundEffect>("Sounds/PasarMouse");
                 sound_click = Content.Load<SoundEffect>("Sounds/sound_click");
                 btnNuevoJuego = new Botones(Content.Load<Texture2D>("Img/NuevoJuego"), sound_PasMouse, sound_click, graphics.GraphicsDevice);
@@ -127,14 +125,11 @@ namespace Turista
                 btn_No = new Botones(Content.Load<Texture2D>("Img/btn_No"), sound_PasMouse, sound_click, graphics.GraphicsDevice);
                 btn_No.setPosicion(new Vector2(520, 415));
                 btn_No.setPosicionRectanguloIsOver(new Vector2(470, 409));
-            }
-            catch
-            {
+            } catch {
                 Environment.Exit(0);
             }
         }
-        protected override void UnloadContent()
-        {
+        protected override void UnloadContent() {
 
         }
         protected override void Update(GameTime gameTime)
@@ -143,20 +138,16 @@ namespace Turista
             VentanaActiva = this.IsActive;
             mouseActual = Mouse.GetState();
             tecladoActual = Keyboard.GetState();
-            switch (EstadoDelJuegoActual)
-            {
+            switch (EstadoDelJuegoActual) {
                 case EstadoJuego.MenuPrincipal:
 
-                    if (btnNuevoJuego.isClicked == true)
-                    {
+                    if (btnNuevoJuego.isClicked == true) {
                         IrAlJuego();
                     }
-                    if (btnOpciones.isClicked == true)
-                    {
+                    if (btnOpciones.isClicked == true) {
                         IrOpciones();
                     }
-                    if (btnBasedatos.isClicked == true)
-                    {
+                    if (btnBasedatos.isClicked == true) {
                         System.Diagnostics.Process p = new System.Diagnostics.Process();
                         p.StartInfo.FileName = "AdministradorBD.exe";
                         p.StartInfo.UseShellExecute = false;
@@ -167,16 +158,13 @@ namespace Turista
                         p.Start();
                         Exit();
                     }
-                    if (btnCredito.isClicked == true)
-                    {
+                    if (btnCredito.isClicked == true) {
                         IrCreditos();
                     }
-                    if (btnAyuda.isClicked == true)
-                    {
+                    if (btnAyuda.isClicked == true) {
                         IrAyuda();
                     }
-                    if (btnSalir.isClicked == true)
-                    {
+                    if (btnSalir.isClicked == true) {
                         IrSalir();
                     }
                     btnNuevoJuego.Update(mouseActual, mouseAnterior, VentanaActiva);
@@ -187,30 +175,24 @@ namespace Turista
                     btnSalir.Update(mouseActual, mouseAnterior, VentanaActiva);
                     break;
                 case EstadoJuego.NuevoJuego:
-                    if (tecladoActual.IsKeyDown(Keys.Escape) && tecladoAnterior.IsKeyUp(Keys.Escape))
-                    {
+                    if (tecladoActual.IsKeyDown(Keys.Escape) && tecladoAnterior.IsKeyUp(Keys.Escape)) {
                         IrMenuPrincipal();
                     }
-                    if (OpcionJuego.CargarJuego == true)
-                    {
+                    if (OpcionJuego.CargarJuego == true) {
                         IrJuego();
-
                     }
-                    if (OpcionJuego.BtnRegresar.isClicked == true)
-                    {
+                    if (OpcionJuego.BtnRegresar.isClicked == true) {
                         IrMenuPrincipal();
                     }
                     Jugar.Update(gameTime, mouseActual, mouseAnterior, VentanaActiva);
                     OpcionJuego.Update(gameTime, mouseActual, mouseAnterior, VentanaActiva);
                     break;
                 case EstadoJuego.Jugando:
-                    if (Jugar.btn_Salir.isClicked == true)
-                    {
+                    if (Jugar.btn_Salir.isClicked == true) {
                         IrMenuPrincipal();
                         Jugar.btn_Salir.isClicked = false;
                     }
-                    if (Jugar.btn_cerrar.isClicked == true)
-                    {
+                    if (Jugar.btn_cerrar.isClicked == true) {
                         IrMenuPrincipal();
                         Jugar.btn_cerrar.isClicked = false;
                     }
@@ -218,13 +200,11 @@ namespace Turista
                     break;
                 case EstadoJuego.Opciones:
                     opciones.Update(gameTime, mouseActual, mouseAnterior, VentanaActiva);
-                    if (opciones.volver == true)
-                    {
+                    if (opciones.volver == true) {
                         IrMenuPrincipal();
                         //btnOpciones.isClicked = false;
                     }
-                    if (opciones.Modificar == true)
-                    {
+                    if (opciones.Modificar == true) {
                         opciones.btn_aplicar.isClicked = false;
                         if (opciones.AplicarIsFullScreen != graphics.IsFullScreen) {
                             string valor = opciones.AplicarIsFullScreen.ToString();
@@ -265,19 +245,16 @@ namespace Turista
                     break;
                 case EstadoJuego.Creditos:
                     creditos.Update(gameTime, mouseActual, mouseAnterior, VentanaActiva);
-                    if (creditos.btnsalir.isClicked == true)
-                    {
+                    if (creditos.btnsalir.isClicked == true) {
                         IrMenuPrincipal();
                     }
-                    if (creditos.termina == true)
-                    {
+                    if (creditos.termina == true) {
                         creditos.termina = false;
                         IrMenuPrincipal();
                     }
                     break;
                 case EstadoJuego.Ayuda:
-                    if (tecladoActual.IsKeyDown(Keys.Escape) && tecladoAnterior.IsKeyUp(Keys.Escape))
-                    {
+                    if (tecladoActual.IsKeyDown(Keys.Escape) && tecladoAnterior.IsKeyUp(Keys.Escape)) {
                         IrMenuPrincipal();
                     }
                     ayuda.Update(gameTime,mouseActual,mouseAnterior,VentanaActiva);
