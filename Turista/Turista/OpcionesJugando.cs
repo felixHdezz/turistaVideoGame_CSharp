@@ -23,11 +23,11 @@ namespace Turista
         Texture2D t2d_fondo;
         public int Equipo_Actual;
         string[] NomEquipos, FondoEquipos;
-        public OpcionesJugando(Game g, DibujaEquipo[] new_equipos, int equipo_actual)
+        public OpcionesJugando(Game game, DibujaEquipo[] newTeam, int currentTeam)
         {
-            game = g;
-            Equipos = new_equipos;
-            Equipo_Actual = equipo_actual;
+            this.game = game;
+            Equipos = newTeam;
+            Equipo_Actual = currentTeam;
             NomEquipos = new string[Equipos.Length];
             FondoEquipos = new string[Equipos.Length];
             t2d_fondo = g.Content.Load<Texture2D>("Img/opaco");
